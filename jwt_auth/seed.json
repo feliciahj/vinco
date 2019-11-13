@@ -1,0 +1,44 @@
+[
+{
+  "model": "jwt_auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$Czmg4k5IVN9l$cOpWQ4BEGK6GAscApi/3QxB98DtRF8fU/h8EvpzO2VQ=",
+    "last_login": "2019-11-13T18:43:00.414Z",
+    "is_superuser": true,
+    "username": "admin",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-11-13T18:42:41.463Z",
+    "title": "",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@email.com",
+    "dob": null,
+    "investing_virgin": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pass",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "feliciahj",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-11-13T18:45:57Z",
+    "title": "Ms",
+    "first_name": "Felicia",
+    "last_name": "Hjertman",
+    "email": "feliciahjertman@gmail.com",
+    "dob": "1987-06-08",
+    "investing_virgin": false,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
