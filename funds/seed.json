@@ -1,0 +1,724 @@
+[
+{
+  "model": "funds.style",
+  "pk": 1,
+  "fields": {
+    "name": "Long-term"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 2,
+  "fields": {
+    "name": "Medium-term"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 3,
+  "fields": {
+    "name": "Growth"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 4,
+  "fields": {
+    "name": "Value"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 5,
+  "fields": {
+    "name": "Deep value"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 6,
+  "fields": {
+    "name": "Income"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 7,
+  "fields": {
+    "name": "Multi-asset"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 8,
+  "fields": {
+    "name": "Total return"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 9,
+  "fields": {
+    "name": "Technology"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 10,
+  "fields": {
+    "name": "ESG"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 11,
+  "fields": {
+    "name": "Index"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 12,
+  "fields": {
+    "name": "OTHER"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 13,
+  "fields": {
+    "name": "Small-cap"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 14,
+  "fields": {
+    "name": "Large-cap"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 15,
+  "fields": {
+    "name": "All-cap"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 16,
+  "fields": {
+    "name": "Food & agriculture"
+  }
+},
+{
+  "model": "funds.style",
+  "pk": 17,
+  "fields": {
+    "name": "Concentrated"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 1,
+  "fields": {
+    "region": "Global"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 2,
+  "fields": {
+    "region": "US"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 3,
+  "fields": {
+    "region": "UK"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 4,
+  "fields": {
+    "region": "India"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 5,
+  "fields": {
+    "region": "Japan"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 6,
+  "fields": {
+    "region": "Europe"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 7,
+  "fields": {
+    "region": "Emerging Markets"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 8,
+  "fields": {
+    "region": "Frontier Markets"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 9,
+  "fields": {
+    "region": "China"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 10,
+  "fields": {
+    "region": "Turkey"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 11,
+  "fields": {
+    "region": "Sweden"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 12,
+  "fields": {
+    "region": "OTHER"
+  }
+},
+{
+  "model": "funds.region",
+  "pk": 13,
+  "fields": {
+    "region": "Russia"
+  }
+},
+{
+  "model": "funds.structure",
+  "pk": 1,
+  "fields": {
+    "vehicle": "OEIC"
+  }
+},
+{
+  "model": "funds.structure",
+  "pk": 2,
+  "fields": {
+    "vehicle": "Investment Trust"
+  }
+},
+{
+  "model": "funds.structure",
+  "pk": 3,
+  "fields": {
+    "vehicle": "SICAV"
+  }
+},
+{
+  "model": "funds.structure",
+  "pk": 4,
+  "fields": {
+    "vehicle": "ETF"
+  }
+},
+{
+  "model": "funds.structure",
+  "pk": 5,
+  "fields": {
+    "vehicle": "Other"
+  }
+},
+{
+  "model": "funds.structure",
+  "pk": 6,
+  "fields": {
+    "vehicle": "OTHER"
+  }
+},
+{
+  "model": "funds.structure",
+  "pk": 7,
+  "fields": {
+    "vehicle": "ICVC"
+  }
+},
+{
+  "model": "funds.structure",
+  "pk": 8,
+  "fields": {
+    "vehicle": "Unit Trust"
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 1,
+  "fields": {
+    "name": "Franklin India",
+    "p_and_p": "blbabla",
+    "people": "blabla",
+    "house": "Franklin Templeton Investments",
+    "sustainability_rating": 3,
+    "manager_diversity_rating": 1,
+    "alignment_rating": 0,
+    "inception_date": "2005-10-25",
+    "fee": "0.0108",
+    "y_2018": "-0.0980",
+    "y_2017": "0.2690",
+    "y_2016": "0.2290",
+    "y_2015": "0.0070",
+    "y_2014": "0.5140",
+    "y_2013": "-0.0610",
+    "y_2012": "0.1780",
+    "y_2011": "0.3130",
+    "y_2010": "0.3180",
+    "y_2009": "0.6290",
+    "stock_1": "Kotak Mahindra Bank",
+    "stock_2": "HDFC Bank",
+    "stock_3": "Bharti Airtel",
+    "stock_4": "Infosys",
+    "stock_5": "Axis Bank",
+    "stock_6": "ICICI Bank",
+    "stock_7": "Ultratech Cement",
+    "stock_8": "Housing Development Finance Corp",
+    "stock_9": "Reliance Industries",
+    "stock_10": "Tata Consultancy Services",
+    "structure": 3,
+    "region": 4,
+    "styles": [
+      1,
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 2,
+  "fields": {
+    "name": "iShares II plc MSCI Turkey",
+    "p_and_p": "blablabal",
+    "people": "blablalba",
+    "house": "BlackRock",
+    "sustainability_rating": 0,
+    "manager_diversity_rating": 0,
+    "alignment_rating": 0,
+    "inception_date": "2006-11-03",
+    "fee": "0.0074",
+    "y_2018": "0.1559",
+    "y_2017": "-0.4202",
+    "y_2016": "0.1372",
+    "y_2015": "0.0511",
+    "y_2014": "-0.2423",
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "TURKIYE GARANTI BANKASI",
+    "stock_2": "BIM BIRLESIK MAGAZALAR",
+    "stock_3": "AKBANK",
+    "stock_4": "TURKIYE PETROL RAFINERILERI",
+    "stock_5": "KOC HOLDING",
+    "stock_6": "TURKCELL ILETISIM HIZMETLERI",
+    "stock_7": "EREGLI DEMIR VE CELIK",
+    "stock_8": "FABRIKALARI",
+    "stock_9": "TURKIYE IS BANKASI",
+    "stock_10": "HACI OMER SABANCI HOLDING",
+    "structure": 4,
+    "region": 10,
+    "styles": [
+      11
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 3,
+  "fields": {
+    "name": "Legg Mason IF Japan Equity",
+    "p_and_p": "blablal",
+    "people": "blalbal",
+    "house": "Legg Mason Global Asset Management",
+    "sustainability_rating": 5,
+    "manager_diversity_rating": 0,
+    "alignment_rating": 0,
+    "inception_date": "1996-10-08",
+    "fee": "0.0102",
+    "y_2018": "-0.1080",
+    "y_2017": "0.3571",
+    "y_2016": "0.2869",
+    "y_2015": "0.4935",
+    "y_2014": null,
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "M3",
+    "stock_2": "NIHON M&A CENTER",
+    "stock_3": "PEPTIDREAM",
+    "stock_4": "PAN PACIFIC INTL HLDGS",
+    "stock_5": "SMS",
+    "stock_6": "NINTENDO",
+    "stock_7": "GMO PAYMENT GATEWAY",
+    "stock_8": "BENEFIT ONE",
+    "stock_9": "EN-JAPAN",
+    "stock_10": "FANCL",
+    "structure": 7,
+    "region": 5,
+    "styles": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 4,
+  "fields": {
+    "name": "Man GLG Japan CoreAlpha",
+    "p_and_p": "basjfdsk",
+    "people": "dsfksdlkd",
+    "house": "Man GLG",
+    "sustainability_rating": 0,
+    "manager_diversity_rating": 1,
+    "alignment_rating": 0,
+    "inception_date": "1999-11-29",
+    "fee": "0.0090",
+    "y_2018": "0.0097",
+    "y_2017": "-0.0243",
+    "y_2016": "0.1712",
+    "y_2015": "0.2365",
+    "y_2014": "0.1706",
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "MITSUBISHI UFJ FINANCIAL GROUP",
+    "stock_2": "HONDA MOTOR",
+    "stock_3": "TOYOTA MOTOR",
+    "stock_4": "NIPPON STEEL",
+    "stock_5": "NOMURA HLDGS",
+    "stock_6": "CANON",
+    "stock_7": "JAPAN POST HOLDINGS",
+    "stock_8": "SUMITOMO MITSUI FINANCIAL GROUP",
+    "stock_9": "MITSUBISHI ESTATE",
+    "stock_10": "AGC",
+    "structure": 1,
+    "region": 5,
+    "styles": [
+      1,
+      4,
+      14
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 5,
+  "fields": {
+    "name": "Monks Investment Trust",
+    "p_and_p": "fbdfvs",
+    "people": "vdsvfvds",
+    "house": "Baillie Gifford & Co",
+    "sustainability_rating": 5,
+    "manager_diversity_rating": 0,
+    "alignment_rating": 0,
+    "inception_date": "1929-02-06",
+    "fee": "0.0000",
+    "y_2018": "0.0780",
+    "y_2017": "0.1910",
+    "y_2016": "0.3560",
+    "y_2015": "0.3790",
+    "y_2014": "0.0290",
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "Naspers",
+    "stock_2": "Amazon.com",
+    "stock_3": "Alibaba Group",
+    "stock_4": "Prudential",
+    "stock_5": "Mastercard",
+    "stock_6": "AIA Group",
+    "stock_7": "Schiehallion Fund",
+    "stock_8": "Moody's Corporation",
+    "stock_9": "Anthem",
+    "stock_10": "Alphabet",
+    "structure": 2,
+    "region": 1,
+    "styles": [
+      1,
+      3,
+      15
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 6,
+  "fields": {
+    "name": "Sarasin Food & Agriculture Opportunities",
+    "p_and_p": "jsdjdsnjk",
+    "people": "skmadslkdlk",
+    "house": "Sarasin & Partners",
+    "sustainability_rating": 10,
+    "manager_diversity_rating": 7,
+    "alignment_rating": 0,
+    "inception_date": "2008-03-31",
+    "fee": "0.0098",
+    "y_2018": "0.0748",
+    "y_2017": "0.1227",
+    "y_2016": "0.1391",
+    "y_2015": "0.3026",
+    "y_2014": "-0.0283",
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "DEERE & CO",
+    "stock_2": "TREASURY WINE ESTATES",
+    "stock_3": "DSM",
+    "stock_4": "ARAMARK",
+    "stock_5": "CHINA MENGNIU DAIRY",
+    "stock_6": "MOWI ASA",
+    "stock_7": "GENUS",
+    "stock_8": "OCADO",
+    "stock_9": "NUTRIEN",
+    "stock_10": "BARRY CALLEBAUT",
+    "structure": 1,
+    "region": 1,
+    "styles": [
+      1,
+      10,
+      16
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 7,
+  "fields": {
+    "name": "Schroder Global Recovery",
+    "p_and_p": "skjflkj",
+    "people": "slksalkdas",
+    "house": "Schroders",
+    "sustainability_rating": 1,
+    "manager_diversity_rating": 7,
+    "alignment_rating": 0,
+    "inception_date": "2015-11-30",
+    "fee": "0.0087",
+    "y_2018": "0.1030",
+    "y_2017": "-0.0191",
+    "y_2016": "0.1399",
+    "y_2015": "0.3226",
+    "y_2014": null,
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "STANDARD CHARTERED",
+    "stock_2": "SANOFI",
+    "stock_3": "ROYAL BANK OF SCOTLAND GROUP",
+    "stock_4": "ANGLO AMERICAN",
+    "stock_5": "BARCLAYS",
+    "stock_6": "UNICREDIT",
+    "stock_7": "SOUTH32",
+    "stock_8": "ENI",
+    "stock_9": "HP",
+    "stock_10": "CENTRICA",
+    "structure": 1,
+    "region": 1,
+    "styles": [
+      1,
+      5,
+      17
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 8,
+  "fields": {
+    "name": "Schroder UK Smaller Companies",
+    "p_and_p": "jdasjsl",
+    "people": "slkdas;lkas;l",
+    "house": "Schroders",
+    "sustainability_rating": 1,
+    "manager_diversity_rating": 1,
+    "alignment_rating": 0,
+    "inception_date": "1979-05-23",
+    "fee": "0.0091",
+    "y_2018": "-0.0110",
+    "y_2017": "-0.0373",
+    "y_2016": "0.3405",
+    "y_2015": "0.0487",
+    "y_2014": "0.2045",
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "APTITUDE SOFTWARE GROUP",
+    "stock_2": "M J GLEESON",
+    "stock_3": "LIONTRUST ASSET MANAGEMENT",
+    "stock_4": "AVON RUBBER",
+    "stock_5": "RM",
+    "stock_6": "COHORT",
+    "stock_7": "GAMES WORKSHOP GROUP",
+    "stock_8": "SDL",
+    "stock_9": "PHOTO-ME INTERNATIONAL",
+    "stock_10": "NCC GROUP",
+    "structure": 8,
+    "region": 3,
+    "styles": [
+      1,
+      4,
+      13
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 9,
+  "fields": {
+    "name": "Scottish Mortgage Investment Trust",
+    "p_and_p": "akdldjlas",
+    "people": "sdlksal;kdsa;",
+    "house": "Baillie Gifford & Co",
+    "sustainability_rating": 5,
+    "manager_diversity_rating": 1,
+    "alignment_rating": 0,
+    "inception_date": "1909-01-01",
+    "fee": "0.0000",
+    "y_2018": "-0.0640",
+    "y_2017": "0.2900",
+    "y_2016": "0.3040",
+    "y_2015": "0.3700",
+    "y_2014": "0.0420",
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "Amazon.com",
+    "stock_2": "Illumina",
+    "stock_3": "Alibaba Group Holding",
+    "stock_4": "Tencent Holdings",
+    "stock_5": "Tesla",
+    "stock_6": "ASML",
+    "stock_7": "Kering",
+    "stock_8": "Ferrari",
+    "stock_9": "Netflix",
+    "stock_10": "Ant International",
+    "structure": 2,
+    "region": 1,
+    "styles": [
+      1,
+      3,
+      9,
+      15
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 10,
+  "fields": {
+    "name": "Xtrackers MSCI Russia Capped",
+    "p_and_p": "fkjsdlkjfd",
+    "people": "sdkjsaljfs",
+    "house": "DWS Group",
+    "sustainability_rating": 1,
+    "manager_diversity_rating": 0,
+    "alignment_rating": 0,
+    "inception_date": "2007-12-07",
+    "fee": "0.0045",
+    "y_2018": "0.3300",
+    "y_2017": "0.0984",
+    "y_2016": "0.1512",
+    "y_2015": "0.1703",
+    "y_2014": "-0.2188",
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "GAZPROM",
+    "stock_2": "LUKOIL",
+    "stock_3": "SBERBANK",
+    "stock_4": "MMC NORILSK NICKEL",
+    "stock_5": "MOBILE TELESYSTEMS",
+    "stock_6": "ROSNEFT OIL",
+    "stock_7": "TATNEFT",
+    "stock_8": "NOVATEK",
+    "stock_9": "SURGUTNEFTEGAS",
+    "stock_10": "VimpelCom",
+    "structure": 4,
+    "region": 13,
+    "styles": [
+      11
+    ]
+  }
+},
+{
+  "model": "funds.fund",
+  "pk": 11,
+  "fields": {
+    "name": "Xtrackers S&P Select Frontier",
+    "p_and_p": "jdslfjas",
+    "people": "kaljdas",
+    "house": "DWS Group",
+    "sustainability_rating": 1,
+    "manager_diversity_rating": 0,
+    "alignment_rating": 0,
+    "inception_date": "2008-01-15",
+    "fee": "0.0075",
+    "y_2018": "0.0905",
+    "y_2017": "-0.1060",
+    "y_2016": "0.3458",
+    "y_2015": "0.1152",
+    "y_2014": "-0.2361",
+    "y_2013": null,
+    "y_2012": null,
+    "y_2011": null,
+    "y_2010": null,
+    "y_2009": null,
+    "stock_1": "MOBILE TELECOMMUNICATIONS",
+    "stock_2": "NATIONAL BANK OF KUWAIT",
+    "stock_3": "Ecopetrol",
+    "stock_4": "KUWAIT FINANCE HOUSE",
+    "stock_5": "KAZ MINERALS",
+    "stock_6": "Bk Cyprus",
+    "stock_7": "Eurasian Natural Resources",
+    "stock_8": "Kazmunaigaz",
+    "stock_9": "Emaar Properties",
+    "stock_10": "Bancolombia",
+    "structure": 4,
+    "region": 8,
+    "styles": [
+      11
+    ]
+  }
+}
+]
