@@ -8,8 +8,58 @@ body {
   // font-family:
 }
 
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: normal;
+}
+
 .centre {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.midpoint {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.formTemplate {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  
+  .userForm{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    .formHeading {
+      text-align: center;
+      color: rgb(87, 87, 87);
+    }
+  
+    .formBackground {
+      border-radius: 5px;
+      margin-top: 10px;
+      box-shadow: 1px 1px 10px rgba(66, 19, 155, 0.479);
+      padding: 30px;
+      width: 36vw;
+      height: auto;
+      margin-bottom: 30px;
+    } 
+  }
 }

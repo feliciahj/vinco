@@ -6,7 +6,9 @@ class Register extends React.Component {
     super()
 
     this.state = {
-      data: {},
+      data: {
+        investing_virgin: true
+      },
       errors: {}
     }
     this.handleChange = this.handleChange.bind(this)
@@ -14,7 +16,8 @@ class Register extends React.Component {
   }
 
   handleChange(e) {
-    const data = { ...this.state.data, [e.target.name]: e.target.value }
+    const newValue = e.target.type === 'checkbox' ? e.target.checked : e.target.value
+    const data = { ...this.state.data, [e.target.name]: newValue }
     const errors = { ...this.state.errors, [e.target.name]: '' }
     this.setState({ data, errors })
   }
@@ -23,17 +26,17 @@ class Register extends React.Component {
     e.preventDefault()
     axios.post('/api/register', this.state.data)
       .then(() => this.props.history.push('/login'))
-      .catch(err => this.setState({ errors: err.response.data.errors }))
+      .catch(err => console.log(err))
   }
 
   render() {
     return (
-      <section>
+      <section className="formTemplate">
 
-        <div className="form-group">
-          <h2>Register</h2>
-          <form className="centre" onSubmit={this.handleSubmit}>
-            <div className="form-group">
+        <div className="userForm form-group">
+          <h2 className="formHeading">Register</h2>
+          <form className="centre"onSubmit={this.handleSubmit}>
+            <div className="formBackground form-group">
               <label>Title</label>
               <input
                 className={`form-input col-12 ${this.state.errors.title ? 'is-error' : ''}`}
@@ -73,7 +76,7 @@ class Register extends React.Component {
                 type="text"
                 id="username"
                 name="username"
-                placeholder="Username"
+                placeholder="Choose your username"
                 onChange={this.handleChange}
               />
               <p className="form-input-hint">{`${this.state.errors.username ? 'A username is required' : ''}`}</p>
@@ -89,7 +92,7 @@ class Register extends React.Component {
               />
               <p className="form-input-hint">{`${this.state.errors.email ? 'An email is required' : ''}`}</p>
 
-              <label>Date of birth (MM/DD/YY)</label>
+              <label>Date of birth (YYYY-MM-DD)</label>
               <input
                 className={`form-input col-12 ${this.state.errors.dob ? 'is-error' : ''}`}
                 type="text"
@@ -105,7 +108,7 @@ class Register extends React.Component {
                   className={`form-input col-12 ${this.state.errors.investing_virgin ? 'is-error' : ''}`}
                   type="checkbox"
                   name="investing_virgin"
-                  checked={this.investing_virgin}
+                  checked={this.state.data.investing_virgin}
                   onChange={this.handleChange}
                 /> 
                 <i className="form-icon"></i> New to investing? 
