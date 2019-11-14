@@ -34,7 +34,7 @@ class Register extends React.Component {
       <section className="formTemplate">
 
         <div className="userForm form-group">
-          <h2 className="formHeading">Register</h2>
+          <h2 className="formHeading">Open account</h2>
           <form className="centre"onSubmit={this.handleSubmit}>
             <div className="formBackground form-group">
               <label>Title</label>
@@ -138,7 +138,7 @@ class Register extends React.Component {
 
               <br />
               <div className="centre">
-                <button className="btn btn-primary btn-lg" type="submit">Register!</button>
+                <button className="btn btn-primary btn-lg" type="submit">Create my VINCO account</button>
               </div>
             </div>
           </form>

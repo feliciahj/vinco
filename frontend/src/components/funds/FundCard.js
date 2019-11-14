@@ -1,7 +1,7 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const FundCard = ({ name, house, structure, region, styles }) => (
+const FundCard = ({ name, house, structure, region, styles, id }) => (
   <div className="card centre">
     <div className="card-header">
       <div className="card-title h4">{name}</div>
@@ -16,6 +16,9 @@ const FundCard = ({ name, house, structure, region, styles }) => (
       </div>
       <div className="text-gray">{structure.vehicle}</div>
     </div>
+    <Link to={`/funds/${id}`}>
+      <button className="btn">More info</button>
+    </Link>
   </div>
 )
 

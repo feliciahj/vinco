@@ -20,12 +20,12 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         <div>
-          <Link to="/">HOME</Link>
+          <Link className="homeLogo" to="/">V</Link>
         </div>
         <div className="input-group input-inline nav-links">
           <Link className="btn btn-link nav-item" to="/funds">Browse funds</Link>
           <Link className="btn btn-link nav-item" to="/map">Map</Link>
-          <Link className="btn btn-link nav-item" to="/register">Register</Link>
+          <Link className="btn btn-link nav-item" to="/register">Create account</Link>
           <Link className="btn btn-link nav-item" to="/login">Login</Link>
           <Link className="btn btn-link nav-item" to="/dashboard">Dashboard</Link>
           <a onClick={this.handleLogout} className="btn btn-link nav-item">Log Out</a>

@@ -3,9 +3,20 @@
   color: black;
 }
 
+$dark: rgb(47,37,116);
+$tanzanite: rgb(74, 3, 189);
+$purple: rgb(67,18,128);
+$midnightblue: rgb(22,16,137);
+
 body {
   padding: 0px;
-  // font-family:
+  // font-family: 
+}
+
+// ****************************************   GENERAL   ****************************************
+
+.column {
+  border: solid;
 }
 
 .container {
@@ -30,12 +41,48 @@ body {
   justify-content: center;
 }
 
+// ****************************************   HOMEPAGE   ****************************************
+
+.vinco1 {
+  color: $tanzanite;
+  // color: $dark;
+  // color: $purple;
+  // color: $midnightblue;
+  font-size: 200px;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.vinco3 {
+  color: $tanzanite;
+  // color: $dark;
+  // color: $purple;
+  // color: $midnightblue;
+  font-size: 200px;
+  font-family: 'Poiret One', cursive;
+}
+
+// ****************************************   NAVBAR   ****************************************
+
+.homeLogo {
+  color: $tanzanite;
+  // color: $dark;
+  // color: $purple;
+  // color: $midnightblue;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Major Mono Display', monospace;
+}
+
+// ****************************************   FUND CARD   ****************************************
+
 .card {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   padding: 20px;
   margin: 20px;
 }
+
+// ****************************************   REGISTER AND LOGIN FORMS   ****************************************
 
 .formTemplate {
   height: auto;
