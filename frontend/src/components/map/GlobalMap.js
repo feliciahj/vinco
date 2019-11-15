@@ -9,11 +9,13 @@ class GlobalMap extends React.Component {
     super()
 
     this.state = {
-      clickedRegion: ''
+      clickedRegion: '',
+      currentLayer: ''
     }
 
     this.layerProps = {
-      onClick: e => this.setState({ clickedRegion: e.target.attributes.name.value })
+      onClick: e => this.setState({ clickedRegion: e.target.attributes.name.value }),
+      onMouseEnter: e => this.setState({ currentLayer: e.target.attributes.id.value })
     }
 
     this.closeModal = this.closeModal.bind(this)
@@ -24,6 +26,7 @@ class GlobalMap extends React.Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <>
       <div>
@@ -46,7 +49,7 @@ class GlobalMap extends React.Component {
             </div>
           </div>
         </div>
-        <VectorMap {...mapData} layerProps={this.layerProps}/>
+        <VectorMap {...mapData} layerProps={this.layerProps} currentLayers={[this.state.currentLayer]}/>
       </div>
   </>
     )

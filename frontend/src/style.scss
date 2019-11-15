@@ -3,7 +3,6 @@
   color: black;
 }
 
-$dark: rgb(47,37,116);
 $tanzanite: rgb(74, 3, 189);
 $purple: rgb(67,18,128);
 $midnightblue: rgb(22,16,137);
@@ -114,5 +113,20 @@ body {
       height: auto;
       margin-bottom: 30px;
     } 
+  }
+}
+
+svg {
+  stroke: rgb(253, 21, 214);
+  stroke-width: 0.4px;
+
+  path {
+    fill: #070000;
+    outline: none;
+
+    // Colour of selected layer:
+    &[aria-current='true'] {
+      fill: $tanzanite;
+    }
   }
 }
