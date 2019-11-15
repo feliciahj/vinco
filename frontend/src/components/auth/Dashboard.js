@@ -14,7 +14,8 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/user', {
+    const userId = this.props.match.params.id
+    axios.get(`/api/dashboard/${userId}`, {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
       .then(res => this.setState({ user: res.data }))
@@ -22,7 +23,7 @@ class Dashboard extends React.Component {
   }
 
   handleDelete() {
-    axios.delete('/api/user', {
+    axios.delete('/api/dashboard', {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
       .then(() => {

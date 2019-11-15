@@ -23,11 +23,11 @@ class Navbar extends React.Component {
           <Link className="homeLogo" to="/">V</Link>
         </div>
         <div className="input-group input-inline nav-links">
-          <Link className="btn btn-link nav-item navItem" to="/funds">bRoWse Funds</Link>
-          <Link className="btn btn-link nav-item navItem" to="/map">Map</Link>
-          <Link className="btn btn-link nav-item navItem vinco" to="/register">opeN accouNt</Link>
-          <Link className="btn btn-link nav-item navItem vinco" to="/login">logIN</Link>
-          <Link className="btn btn-link nav-item navItem vinco" to="/dashboard">dashboaRd</Link>
+          <Link className="btn btn-link nav-item navItem" to="/funds">browse funds</Link>
+          <Link className="btn btn-link nav-item navItem" to="/map">map</Link>
+          <Link className="btn btn-link nav-item navItem vinco" to="/register">open account</Link>
+          <Link className="btn btn-link nav-item navItem vinco" to="/login">login</Link>
+          <Link className="btn btn-link nav-item navItem vinco" to="/dashboard">dashboard</Link>
           <a onClick={this.handleLogout} className="btn btn-link nav-item navItem vinco">log out</a>
         </div>
       </nav>

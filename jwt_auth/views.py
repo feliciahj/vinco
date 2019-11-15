@@ -1,6 +1,8 @@
  # pylint: disable=no-member,arguments-differ
 
 from rest_framework.views import APIView
+from rest_framework.generics import RetrieveUpdateDestroyAPIView
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.exceptions import PermissionDenied
 from django.contrib.auth import get_user_model
@@ -41,4 +43,11 @@ class LoginView(APIView):
 
         token = jwt.encode({'sub': user.id}, settings.SECRET_KEY, algorithm='HS256')
         return Response({'token': token, 'message': f'Welcome back {user.first_name}'})
+
+
+class DashboardView(RetrieveUpdateDestroyAPIView):
+    # permission_classes = (IsAuthenticatedOrReadOnly, )
+    queryset = User
+    serializer_class = UserSerializer
+
 
