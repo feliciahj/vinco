@@ -28,7 +28,7 @@ class Navbar extends React.Component {
           <Link className="btn btn-link nav-item navItem vinco" to="/register">open account</Link>
           <Link className="btn btn-link nav-item navItem vinco" to="/login">login</Link>
           <Link className="btn btn-link nav-item navItem vinco" to="/dashboard">dashboard</Link>
-          <a onClick={this.handleLogout} className="btn btn-link nav-item navItem vinco">log out</a>
+          <a onClick={this.handleLogout} className="btn btn-link nav-item navItem vinco">logout</a>
         </div>
       </nav>
     )

@@ -29,6 +29,7 @@ class Login extends React.Component {
         Auth.setToken(res.data.token)
         this.props.history.push('/dashboard')
       })
+      // .then(res => console.log(res))
       .catch(err => console.log(err))
   }
 
@@ -63,7 +64,7 @@ class Login extends React.Component {
                 {/* {this.state.error && <p className="form-input-hint is-error">{this.state.error}</p>} */}
                 <br />
                 <div className="centre">
-                  <button className="btn btn-primary btn-lg vinco" type="submit">log IN</button>
+                  <button className="btn btn-primary btn-lg vinco" type="submit">logIN</button>
                 </div>
               </div>
             </form>

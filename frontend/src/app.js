@@ -26,7 +26,7 @@ import FundShow from './components/funds/FundShow'
 import Trade from './components/funds/Trade'
 
 // MAP
-// import GlobalMap from './components/map/GlobalMap'
+import GlobalMap from './components/map/GlobalMap'
 
 
 const App = () => (
@@ -46,7 +46,7 @@ const App = () => (
       <Route path="/trade" component={Trade} />
       <Route path="/funds/:id" component={FundShow} />
       <Route path="/funds" component={FundIndex} />
-      {/* <Route path="/map" component={GlobalMap} /> */}
+      <Route path="/map" component={GlobalMap} />
     </Switch>
     </>
     </BrowserRouter>

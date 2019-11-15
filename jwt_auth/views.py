@@ -46,7 +46,7 @@ class LoginView(APIView):
 
 
 class DashboardView(RetrieveUpdateDestroyAPIView):
-    # permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (IsAuthenticatedOrReadOnly, )
     queryset = User
     serializer_class = UserSerializer
 
