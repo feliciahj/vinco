@@ -7,10 +7,11 @@ $dark: rgb(47,37,116);
 $tanzanite: rgb(74, 3, 189);
 $purple: rgb(67,18,128);
 $midnightblue: rgb(22,16,137);
+$emerald: rgb(24, 143, 0);
 
 body {
   padding: 0px;
-  // font-family: 
+  font-family: 'Montserrat', sans-serif;
 }
 
 // ****************************************   GENERAL   ****************************************
@@ -43,22 +44,17 @@ body {
 
 // ****************************************   HOMEPAGE   ****************************************
 
-.vinco1 {
+.vinco {
   color: $tanzanite;
   // color: $dark;
   // color: $purple;
   // color: $midnightblue;
-  font-size: 200px;
+  // color: $emerald;
   font-family: 'Major Mono Display', monospace;
 }
 
-.vinco3 {
-  color: $tanzanite;
-  // color: $dark;
-  // color: $purple;
-  // color: $midnightblue;
+.homeTitle {
   font-size: 200px;
-  font-family: 'Poiret One', cursive;
 }
 
 // ****************************************   NAVBAR   ****************************************
@@ -68,7 +64,17 @@ body {
   // color: $dark;
   // color: $purple;
   // color: $midnightblue;
-  font-size: 30px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.navItem {
+  color: $tanzanite;
+  // color: $dark;
+  // color: $purple;
+  // color: $midnightblue;
+  font-size: 20px;
   font-weight: bold;
   font-family: 'Major Mono Display', monospace;
 }

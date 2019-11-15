@@ -11,8 +11,7 @@ class Home extends React.Component {
   render() {
     return (
       <>
-      <h1 className="container midpoint vinco1">VINCO</h1>
-      <h1 className="container midpoint vinco3">VINCO</h1>
+      <h1 className="container midpoint vinco homeTitle">VINco</h1>
       </>
     )
   }

@@ -38,7 +38,7 @@ class Login extends React.Component {
       <div className="container midpoint">
         <section className="formTemplate">
           <div className="userForm form-group">
-            <h2 className="formHeading">Welcome back!</h2>
+            <h2 className="formHeading vinco">WelcoMe bacK!</h2>
             <form className="centre" onSubmit={this.handleSubmit}>
               <div className="formBackground form-group centre">
                 <label className="centre form-label" htmlFor="email">Email</label>
@@ -63,7 +63,7 @@ class Login extends React.Component {
                 {/* {this.state.error && <p className="form-input-hint is-error">{this.state.error}</p>} */}
                 <br />
                 <div className="centre">
-                  <button className="btn btn-primary btn-lg" type="submit">Log in</button>
+                  <button className="btn btn-primary btn-lg vinco" type="submit">log IN</button>
                 </div>
               </div>
             </form>
