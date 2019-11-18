@@ -1,9 +1,23 @@
 import React from 'react'
 
-const FundFilter = ({ handleHouse, handleStructure, handleStyles }) => (
+const FundFilter = ({ handleRegion, handleHouse, handleStructure, handleStyles }) => (
   <form>
     <div>
-      <h4>Asset manager</h4>
+      <h5>Region</h5>
+      <select name="region" onChange={handleRegion}>
+        <option value="All">All</option>
+        <option value="Russia">Russia</option>
+        <option value="Frontier Markets">Frontier Markets</option>
+        <option value="Emerging Markets">Emerging Markets</option>
+        <option value="Europe">Europe</option>
+        <option value="Japan">Japan</option>
+        <option value="India">India</option>
+        <option value="UK">UK</option>
+        <option value="US">US</option>
+      </select>
+    </div>
+    <div>
+      <h5>Asset manager</h5>
       <select name="house" onChange={handleHouse}>
         <option value="All">All</option>
         <option value="Franklin Templeton Investments">Franklin Templeton Investments</option>
@@ -17,7 +31,7 @@ const FundFilter = ({ handleHouse, handleStructure, handleStyles }) => (
       </select>
     </div>
     <div>
-      <h4>Asset structure</h4>
+      <h5>Asset structure</h5>
       <select name="structure" onChange={handleStructure}>
         <option value="All">All</option>
         <option value="Unit Trust">Unit Trust</option>
@@ -30,7 +44,7 @@ const FundFilter = ({ handleHouse, handleStructure, handleStyles }) => (
       </select>
     </div>
     <div>
-      <h4>Fund style</h4>
+      <h5>Fund style</h5>
       <select name="styles" onChange={handleStyles}>
         <option value="All">All</option>
         <option value="	Concentrated">	Concentrated</option>

@@ -32,6 +32,7 @@ class Structure(models.Model):
 # the FUND model is the *MAIN* model: 
 class Fund(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    image = models.CharField(max_length=150, default='')
     p_and_p = models.TextField(default='')
     people = models.TextField(default='')
     house = models.CharField(max_length=150)

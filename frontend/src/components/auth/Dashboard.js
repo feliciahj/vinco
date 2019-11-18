@@ -8,7 +8,9 @@ class Dashboard extends React.Component {
     super()
 
     this.state = {
-      user: null
+      user: null,
+      my_funds: '',
+      followed_funds: ''
     }
     this.handleDelete = this.handleDelete.bind(this)
   }
@@ -38,6 +40,8 @@ class Dashboard extends React.Component {
 
   render() {
     if (!this.state.user) return null
+    console.log(this.state)
+    // console.log(this.props.location.state.from)
     const { user } = this.state
     return (
       <section className="container">
@@ -51,15 +55,13 @@ class Dashboard extends React.Component {
           </div>
           <div className="column col-12">My portfolio</div>
           <div className="column col-12">
-            {/* {this.isOwner() &&  */}
             <>
-              <Link to={'/dashboard/edit'} className="btn btn-primary">
+              <Link to={'/dashboard/edit'} data={user} className="btn btn-primary">
                  Edit my account
               </Link>
               <span> </span>
               <button onClick={this.handleDelete} className="btn btn-error">Delete my account</button>
             </>
-            {/* } */}
           </div>
         </div>
       </section >

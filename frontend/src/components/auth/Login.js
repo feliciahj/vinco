@@ -29,7 +29,6 @@ class Login extends React.Component {
         Auth.setToken(res.data.token)
         this.props.history.push('/dashboard')
       })
-      // .then(res => console.log(res))
       .catch(err => console.log(err))
   }
 

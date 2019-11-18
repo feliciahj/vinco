@@ -8,9 +8,10 @@ $purple: rgb(67,18,128);
 $midnightblue: rgb(22,16,137);
 $emerald: rgb(24, 143, 0);
 
-body {
+html, body {
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
+  height: 100%
 }
 
 // ****************************************   GENERAL   ****************************************
@@ -53,7 +54,7 @@ body {
 }
 
 .homeTitle {
-  font-size: 200px;
+  font-size: 150px;
 }
 
 // ****************************************   NAVBAR   ****************************************
@@ -63,7 +64,7 @@ body {
   // color: $dark;
   // color: $purple;
   // color: $midnightblue;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   font-family: 'Major Mono Display', monospace;
 }
@@ -73,7 +74,7 @@ body {
   // color: $dark;
   // color: $purple;
   // color: $midnightblue;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   font-family: 'Major Mono Display', monospace;
 }
@@ -82,8 +83,8 @@ body {
 // ****************************************   FUND INDEX   ****************************************
 
 .fundContainer {
-  height: 100vh;
-  width: 100vw;
+  // height: 100vh;
+  // width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -92,10 +93,32 @@ body {
 // ****************************************   FUND CARD   ****************************************
 
 .card {
-  width: 350px;
-  height: 350px;
-  padding: 20px;
-  margin: 20px;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card-title.h4 {
+  font-size: 17px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+}
+
+.card-body {
+  font-size: 12px;
+}
+
+// ****************************************   MAP   ****************************************
+.map {
+  height: 100vh;
+  width: 100vw;
+  // display: flex;
+  // flex-wrap: wrap;
+  // flex-direction: column;
+  // justify-content: normal;
 }
 
 // ****************************************   REGISTER AND LOGIN FORMS   ****************************************

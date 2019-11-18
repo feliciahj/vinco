@@ -30,7 +30,7 @@ class FundShow extends React.Component {
             <Link to={{ pathname: '/trade', state: { fund } }}>
               <button className="btn btn-lg btn-success">Trade this fund</button>
             </Link>
-            <Link to="/dashboard">
+            <Link to={{ pathname: '/dashboard', state: { from: fund } }}>
               <button className="btn btn-lg">Follow this fund</button>
             </Link>
           </div>

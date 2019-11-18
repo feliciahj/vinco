@@ -15,8 +15,15 @@ class GlobalMap extends React.Component {
       regions: ''
     }
 
+    this.regions = [
+      ['sweden'],
+      ['brazil', 'russia', 'india', 'china', 'mexico', 'indonesia', 'south korea', 'turkey', 'colombia', 'indonesia', 'vietnam', 'egypt', 'turkey', 'south africa'],
+      ['argentina', 'Bahrain', 'Bangladesh', 'Burkina Faso', 'Benin', 'Croatia', 'Estonia', 'Guinea-Bissau', 'Ivory Coast', 'Jordan', 'Kenya', 'Kuwait', 'Lebanon', 'Lithuania', 'Kazakhstan', 'Mauritius', 'Mali', 'Morocco', 'Niger', 'Nigeria', 'Oman', 'Romania', 'Serbia', 'Senegal', 'Slovenia', 'Sri Lanka', 'Togo', 'Tunisia', 'Vietnam'],
+      ['Austria', 'Belgium', 'Denmark', 'Finland', 'France', 'Germany', 'Ireland', 'Italy', 'Netherlands', 'Norway', 'Portugal', 'Spain', 'Sweden', 'Switzerland', 'UK']
+    ]
+
     this.layerProps = {
-      onClick: e => this.setState({ clickedRegion: e.target.attributes.name.value }),
+      onClick: e => this.setState({ clickedRegion: e.target.attributes.name.value.toLowerCase() }),
       onMouseEnter: e => this.setState({ currentLayer: e.target.attributes.id.value })
     }
 
@@ -27,6 +34,16 @@ class GlobalMap extends React.Component {
     this.setState({ clickedRegion: '' })
   }
 
+  getRegion() {
+    const index = this.regions.findIndex(region => region.includes(this.state.currentLayer))
+    return index === -1 ? [] : this.regions[index]
+  }
+
+  getClickedRegion() {
+    const index = this.regions.findIndex(region => region.includes(this.state.clickedRegion))
+    return index === -1 ? [] : this.regions[index]
+  }
+
   componentDidMount() {
     axios.get('/api/regions')
       .then(res => this.setState({ regions: res.data }))
@@ -34,7 +51,6 @@ class GlobalMap extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     const { clickedRegion } = this.state
     return (
       <>
@@ -48,7 +64,8 @@ class GlobalMap extends React.Component {
             </div>
             <div className="modal-body">
               <div className="content">
-                {this.state.clickedRegion} description will go here once I have figured out how to pass the props down. 
+                {this.state.regions.description} description will go here once I have figured out how to pass the props down. 
+                {this.getClickedRegion().map(region => <p key={region}>{region}</p>)}
               </div>
             </div>
             <div className="modal-footer">
@@ -58,7 +75,9 @@ class GlobalMap extends React.Component {
             </div>
           </div>
         </div>
-        <VectorMap {...mapData} layerProps={this.layerProps} currentLayers={[this.state.currentLayer]}/>
+        <div className="map">
+          <VectorMap {...mapData} layerProps={this.layerProps} currentLayers={this.getRegion()}/>     
+        </div>
       </div>
   </>
     )
@@ -67,8 +86,6 @@ class GlobalMap extends React.Component {
 
 export default GlobalMap
 
-
-// {[this.state.currentLayer]}
 
 
 
