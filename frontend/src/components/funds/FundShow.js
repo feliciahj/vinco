@@ -38,6 +38,7 @@ class FundShow extends React.Component {
             <h3>HOW</h3>
             <div>Inception date: {fund.inception_date}</div>
             <div>Fund structure: {fund.structure.vehicle}</div>
+            {/* <div>Region info: {fund.region.description})</div> */}
             <div>Investment style:
               {fund.styles.map(style => (
                 <li key={style.name}>{style.name}</li>

@@ -2,6 +2,7 @@ import React from 'react'
 import { VectorMap } from '@south-paw/react-vector-maps'
 import mapData from './mapData.json'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 // Render app with demo chart
 class GlobalMap extends React.Component {
@@ -10,7 +11,8 @@ class GlobalMap extends React.Component {
 
     this.state = {
       clickedRegion: '',
-      currentLayer: ''
+      currentLayer: '',
+      regions: ''
     }
 
     this.layerProps = {
@@ -25,8 +27,15 @@ class GlobalMap extends React.Component {
     this.setState({ clickedRegion: '' })
   }
 
+  componentDidMount() {
+    axios.get('/api/regions')
+      .then(res => this.setState({ regions: res.data }))
+      .catch(err => console.log(err))
+  }
+
   render() {
     console.log(this.state)
+    const { clickedRegion } = this.state
     return (
       <>
       <div>
@@ -39,12 +48,12 @@ class GlobalMap extends React.Component {
             </div>
             <div className="modal-body">
               <div className="content">
-                {this.state.clickedRegion} description will go here once updated in backend. 
+                {this.state.clickedRegion} description will go here once I have figured out how to pass the props down. 
               </div>
             </div>
             <div className="modal-footer">
-              <Link to={'/funds/'}>
-                <button className="btn">Take me to the {this.state.clickedRegion} funds</button>
+              <Link to={{ pathname: '/funds', state: { from: clickedRegion } }}>
+                <button className="btn">Take me to the {clickedRegion} funds</button>
               </Link>
             </div>
           </div>
@@ -59,7 +68,7 @@ class GlobalMap extends React.Component {
 export default GlobalMap
 
 
-
+// {[this.state.currentLayer]}
 
 
 

@@ -51,7 +51,7 @@ class NestedRegionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Region
-        fields = ('id', 'region') 
+        fields = ('id', 'region', 'description') 
 
 class NestedStructureSerializer(serializers.ModelSerializer):
 
@@ -73,7 +73,7 @@ class RegionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Region
-        fields = ('id', 'region', 'funds')
+        fields = ('id', 'region', 'description', 'funds')
 
 class StructureSerializer(serializers.ModelSerializer):
 

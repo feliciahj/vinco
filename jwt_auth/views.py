@@ -2,6 +2,7 @@
 
 from rest_framework.views import APIView
 from rest_framework.generics import RetrieveUpdateDestroyAPIView
+from rest_framework.status import HTTP_204_NO_CONTENT, HTTP_422_UNPROCESSABLE_ENTITY
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.exceptions import PermissionDenied
@@ -10,6 +11,7 @@ from django.conf import settings
 import jwt
 from .serializers import UserSerializer
 User = get_user_model()
+from datetime import datetime, timedelta
 
 # Create your views here
 class RegisterView(APIView):
@@ -38,6 +40,9 @@ class LoginView(APIView):
 
         user = self.get_user(email)
 
+        dt = datetime.now() + timedelta(days=1)
+        token = jwt.encode({'sub': user.id, 'exp': int(dt.strftime('%s'))}, settings.SECRET_KEY, algorithm='HS256')
+
         if not user.check_password(password):
             raise PermissionDenied({'message': 'Invalid credentials'})
 
@@ -45,9 +50,26 @@ class LoginView(APIView):
         return Response({'token': token, 'message': f'Welcome back {user.first_name}'})
 
 
-class DashboardView(RetrieveUpdateDestroyAPIView):
+class DashboardView(APIView): 
     permission_classes = (IsAuthenticatedOrReadOnly, )
-    queryset = User
-    serializer_class = UserSerializer
 
+    def get(self, request):
+        user = User.objects.get(pk=request.user.id) # we get this request.user.id because it is a protected route, the information comes from the token used
+        serialized_user = UserSerializer(user) # serialize the found user into JSON ready to send back
+        return Response(serialized_user.data) # then actually sending it back in the response
+
+    
+    def put(self, request):
+        user = User.objects.get(pk=request.user.id)
+        updated_user = UserSerializer(user, data=request.data)
+        if updated_user.is_valid():
+            updated_user.save()
+            return Response(updated_user.data)
+        return Response(updated_user.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
+
+
+    def delete(self, request):
+        user = User.objects.get(pk=request.user.id) # find the user by the token
+        user.delete() # delete them
+        return Response(status=HTTP_204_NO_CONTENT) # send a 204 no content response to the client to show it has been deleted
 

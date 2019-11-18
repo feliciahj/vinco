@@ -18,7 +18,7 @@ import Navbar from './components/common/Navbar'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Dashboard from './components/auth/Dashboard'
-// import DashboardEdit from './components/auth/DashboardEdit'
+import DashboardEdit from './components/auth/DashboardEdit'
 
 // FUNDS
 import FundIndex from './components/funds/FundIndex'
@@ -40,7 +40,7 @@ const App = () => (
       <Route path="/register" component={Register} />
       <Route path="/login" component={Login} />
 
-      {/* <Route path="/dashboard/edit" component={DashboardEdit} /> */}
+      <Route path="/dashboard/edit" component={DashboardEdit} />
       <Route path="/dashboard" component={Dashboard} />
 
       <Route path="/trade" component={Trade} />

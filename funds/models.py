@@ -15,6 +15,7 @@ class Style(models.Model):
 # the REGION model is a one-to-many relationship with the FUND model:
 class Region(models.Model):
     region = models.CharField(max_length=100)
+    description = models.TextField(default='')
 
     def __str__(self):
         return self.region

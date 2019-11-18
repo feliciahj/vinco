@@ -14,7 +14,7 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/dashboard/', {
+    axios.get('/api/dashboard', {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
       .then(res => this.setState({ user: res.data }))
@@ -50,16 +50,16 @@ class Dashboard extends React.Component {
             <div>My followed funds:</div>
           </div>
           <div className="column col-12">My portfolio</div>
-          <div>
-            {this.isOwner() && 
+          <div className="column col-12">
+            {/* {this.isOwner() &&  */}
             <>
-              <Link to={`/dashboard/edit/${user.id}`} className="btn btn-primary">
+              <Link to={'/dashboard/edit'} className="btn btn-primary">
                  Edit my account
               </Link>
               <span> </span>
               <button onClick={this.handleDelete} className="btn btn-error">Delete my account</button>
             </>
-            }
+            {/* } */}
           </div>
         </div>
       </section >
