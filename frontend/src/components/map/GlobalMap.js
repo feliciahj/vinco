@@ -67,7 +67,6 @@ class GlobalMap extends React.Component {
   render() {
     if (!this.state.regions) return null
     const { clickedRegion, regions } = this.state
-    console.log(regions)
     return (
       <>
       <div>
@@ -80,12 +79,14 @@ class GlobalMap extends React.Component {
             </div>
             <div className="modal-body">
               <div className="content">
-                {regions.map(region => <p key={region.id}>{region.description}</p>)}
+                {regions
+                  .filter(reg => reg.region.toLowerCase() === clickedRegion)
+                  .map(region => <p key={region.id}>{region.description}</p>)}
               </div>
             </div>
             <div className="modal-footer">
               <Link to={{ pathname: '/funds', state: { from: clickedRegion } }}>
-                <button className="btn">Take me to the {clickedRegion} funds</button>
+                <button className="btn">Take me to the {clickedRegion.toUpperCase()} funds</button>
               </Link>
             </div>
           </div>

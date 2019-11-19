@@ -31,119 +31,120 @@ class Register extends React.Component {
 
   render() {
     return (
-      <section className="formTemplate">
-
-        <div className="userForm form-group">
-          <h2 className="formHeading vinco">opeN accouNt</h2>
-          <form className="centre"onSubmit={this.handleSubmit}>
-            <div className="formBackground form-group">
-              <label>Title</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.title ? 'is-error' : ''}`}
-                type="text"
-                id="title"
-                name="title"
-                placeholder="Title"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.title ? 'Title is required' : ''}`}</p>
-
-              <label>First name</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.first_name ? 'is-error' : ''}`}
-                type="text"
-                id="first_name"
-                name="first_name"
-                placeholder="First name"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.first_name ? 'First name is required' : ''}`}</p>
-
-              <label>Surname</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.last_name ? 'is-error' : ''}`}
-                type="text"
-                id="last_name"
-                name="last_name"
-                placeholder="Surname"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.last_name ? 'Surname is required' : ''}`}</p>
-
-              <label>Username</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.username ? 'is-error' : ''}`}
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Choose your username"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.username ? 'A username is required' : ''}`}</p>
-
-              <label>Email</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.email ? 'is-error' : ''}`}
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.email ? 'An email is required' : ''}`}</p>
-
-              <label>Date of birth (YYYY-MM-DD)</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.dob ? 'is-error' : ''}`}
-                type="text"
-                id="dob"
-                name="dob"
-                placeholder="Date of birth"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.dob ? 'Date of birth is required' : ''}`}</p>
-
-              <label className="form-checkbox">
-                <input 
-                  className={`form-input col-12 ${this.state.errors.investing_virgin ? 'is-error' : ''}`}
-                  type="checkbox"
-                  name="investing_virgin"
-                  checked={this.state.data.investing_virgin}
+      <div className="form-container">
+        <section className="formTemplate">
+          <div className="userForm form-group">
+            <h2 className="formHeading vinco">opeN accouNt</h2>
+            <form className="centre"onSubmit={this.handleSubmit}>
+              <div className="formBackground form-group">
+                <label className="vincoBold">title</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.title ? 'is-error' : ''}`}
+                  type="text"
+                  id="title"
+                  name="title"
+                  placeholder="TITLE"
                   onChange={this.handleChange}
-                /> 
-                <i className="form-icon"></i> New to investing? 
-              </label>
-              
-              <label>Password</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.password ? 'is-error' : ''}`}
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Password"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.password ? 'Passwords need to be a minimum of 8 charachters long and contain at least one number' : ''}`}</p>
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.title ? 'Title is required' : ''}`}</p> */}
 
-              <label>Password confirmation</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.password_confirmation ? 'is-error' : ''}`}
-                type="password"
-                id="password_confirmation"
-                name="password_confirmation"
-                placeholder="Confirm your password"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.password_confirmation ? 'The passwords do not match' : ''}`}</p>
+                <label className="vincoBold">first name</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.first_name ? 'is-error' : ''}`}
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  placeholder="FIRST NAME"
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.first_name ? 'First name is required' : ''}`}</p> */}
 
-              <br />
-              <div className="centre">
-                <button className="btn btn-primary btn-lg vinco" type="submit">create my VINco accouNt</button>
+                <label className="vincoBold">surname</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.last_name ? 'is-error' : ''}`}
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  placeholder="SURNAME"
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.last_name ? 'Surname is required' : ''}`}</p> */}
+
+                <label className="vincoBold">username</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.username ? 'is-error' : ''}`}
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="CHOOSE YOUR USERNAME"
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.username ? 'A username is required' : ''}`}</p> */}
+
+                <label className="vincoBold">email</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.email ? 'is-error' : ''}`}
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="EMAIL"
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.email ? 'An email is required' : ''}`}</p> */}
+
+                <label className="vincoBold">date of birth (yyyy-mm-dd)</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.dob ? 'is-error' : ''}`}
+                  type="text"
+                  id="dob"
+                  name="dob"
+                  placeholder="DATE OF BIRTH"
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.dob ? 'Date of birth is required' : ''}`}</p> */}
+
+                <label className="form-checkbox vinco">
+                  <input 
+                    className={`form-input col-12 ${this.state.errors.investing_virgin ? 'is-error' : ''}`}
+                    type="checkbox"
+                    name="investing_virgin"
+                    checked={this.state.data.investing_virgin}
+                    onChange={this.handleChange}
+                  /> 
+                  <i className="form-icon"></i> new to investing? 
+                </label>
+
+                <label className="vincoBold">password</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.password ? 'is-error' : ''}`}
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="PASSWORD"
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.password ? 'Passwords need to be a minimum of 8 charachters long and contain at least one number' : ''}`}</p> */}
+
+                <label className="vincoBold">password confirmation</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.password_confirmation ? 'is-error' : ''}`}
+                  type="password"
+                  id="password_confirmation"
+                  name="password_confirmation"
+                  placeholder="CONFIRM YOUR PASSWORD"
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.password_confirmation ? 'The passwords do not match' : ''}`}</p> */}
+
+                <br />
+                <div className="centre">
+                  <button className="btn btn-primary btn-sm vinco" type="submit">create my VINco accouNt</button>
+                </div>
               </div>
-            </div>
-          </form>
-        </div>
-      </section>
+            </form>
+          </div>
+        </section>
+      </div>
     )
   }
 }

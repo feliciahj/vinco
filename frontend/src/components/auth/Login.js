@@ -35,41 +35,43 @@ class Login extends React.Component {
   render() {
     return (
       <>
+    <div className="form-container">
       <div className="container midpoint">
         <section className="formTemplate">
           <div className="userForm form-group">
             <h2 className="formHeading vinco">WelcoMe bacK!</h2>
             <form className="centre" onSubmit={this.handleSubmit}>
               <div className="formBackground form-group centre">
-                <label className="centre form-label" htmlFor="email">Email</label>
+                <label className="centre form-label vinco login" htmlFor="email">Email</label>
                 <input 
                   className={`form-input col-7 ${this.state.error ? 'is-error' : ''}`}
                   name="email" 
                   type="text" 
                   id="email" 
-                  placeholder="Email" 
+                  placeholder="EMAIL" 
                   onChange={this.handleChange}/>
                 {/* <p className="form-input-hint">{`${this.state.error ? 'Incorrect password' : ''}`}</p> */}
               
-                <label className="form-label" htmlFor="password">Password</label>
+                <label className="form-label vinco login" htmlFor="password">passWord</label>
                 <input 
                   className={`form-input col-7 ${this.state.error ? 'is-error' : ''}`}
                   name="password" 
                   type="password"
                   id="password" 
-                  placeholder="Password" 
+                  placeholder="PASSWORD" 
                   onChange={this.handleChange}
                 />
                 {/* {this.state.error && <p className="form-input-hint is-error">{this.state.error}</p>} */}
                 <br />
                 <div className="centre">
-                  <button className="btn btn-primary btn-lg vinco" type="submit">logIN</button>
+                  <button className="btn btn-primary vinco" type="submit">logIN</button>
                 </div>
               </div>
             </form>
           </div>
         </section>
       </div>
+    </div>
       </>
     )
   }

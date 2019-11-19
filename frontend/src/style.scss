@@ -7,6 +7,7 @@ $tanzanite: rgb(74, 3, 189);
 $purple: rgb(67,18,128);
 $midnightblue: rgb(22,16,137);
 $emerald: rgb(24, 143, 0);
+$grey: rgb(83, 80, 88);
 
 html, body {
   padding: 0px;
@@ -42,16 +43,23 @@ html, body {
   justify-content: center;
 }
 
-// ****************************************   HOMEPAGE   ****************************************
-
 .vinco {
   color: $tanzanite;
-  // color: $dark;
-  // color: $purple;
-  // color: $midnightblue;
-  // color: $emerald;
   font-family: 'Major Mono Display', monospace;
 }
+
+.vincoGrey {
+  color: $grey;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.vincoBold {
+  color: $tanzanite;
+  font-family: 'Major Mono Display', monospace;
+  font-weight: bold;
+}
+
+// ****************************************   HOMEPAGE   ****************************************
 
 .homeTitle {
   font-size: 150px;
@@ -59,21 +67,15 @@ html, body {
 
 // ****************************************   NAVBAR   ****************************************
 
-.homeLogo {
+.logo {
   color: $tanzanite;
-  // color: $dark;
-  // color: $purple;
-  // color: $midnightblue;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   font-family: 'Major Mono Display', monospace;
 }
 
 .navItem {
   color: $tanzanite;
-  // color: $dark;
-  // color: $purple;
-  // color: $midnightblue;
   font-size: 15px;
   font-weight: bold;
   font-family: 'Major Mono Display', monospace;
@@ -127,35 +129,6 @@ html, body {
   // justify-content: normal;
 }
 
-// ****************************************   REGISTER AND LOGIN FORMS   ****************************************
-
-.formTemplate {
-  height: auto;
-  display: flex;
-  justify-content: center;
-  
-  .userForm{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-
-    .formHeading {
-      text-align: center;
-      color: rgb(87, 87, 87);
-    }
-  
-    .formBackground {
-      border-radius: 5px;
-      margin-top: 10px;
-      box-shadow: 1px 1px 10px rgba(66, 19, 155, 0.479);
-      padding: 30px;
-      width: 36vw;
-      height: auto;
-      margin-bottom: 30px;
-    } 
-  }
-}
-
 svg {
   stroke: rgb(253, 21, 214);
   stroke-width: 0.4px;
@@ -169,4 +142,53 @@ svg {
       fill: $tanzanite;
     }
   }
+}
+
+// ****************************************   REGISTER AND LOGIN FORMS   ****************************************
+
+
+.form-container {
+  height: 100%;
+  width: 100%;
+  // transform: scale(0.9);
+
+  .formTemplate {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    
+    
+    .userForm{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      font-size: 12px;
+  
+      .formHeading {
+        text-align: center;
+        color: $grey;
+      }
+    
+      .formBackground {
+        border-radius: 5px;
+        margin-top: 10px;
+        box-shadow: 1px 1px 10px rgba(66, 19, 155, 0.479);
+        padding: 30px;
+        width: 36vw;
+        height: auto;
+        margin-bottom: 30px;
+      } 
+        input {
+          font-size: 12px;
+          height: 30px;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+
+    }
+  }
+}
+
+.login {
+  font-size: 17px;
 }

@@ -51,7 +51,9 @@ class FundIndex extends React.Component {
 
   fundFilter() {
     if (this.props.location.state) {
-      return this.state.funds.filter(fund => fund.region.region.toLowerCase() === this.props.location.state.from)
+      const filtered = this.state.funds.filter(fund => fund.region.region.toLowerCase() === this.props.location.state.from)
+      this.props.location.state = ''
+      return filtered
     }
     const { styles, house, structure, search, focus } = this.state
     const re = new RegExp(search, 'i')
