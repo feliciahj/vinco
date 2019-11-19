@@ -17,21 +17,28 @@ class Trade extends React.Component {
     const fund = this.props.location.state.fund
     return (
       <>
-      <div className="centre">
-        <h3 className="centre"><span>You are trading {fund.name}</span></h3>
-      </div>
-      <div className="columns">
-        <div className="column col-6">
-          <FundCard key={fund.id} {...fund} 
-          />
-        </div>
-        <div className="column col-6">
-          <div>Trade info</div>
-        </div>
-        <div className="column col-12 centre">
-          <Link to="/dashboard">
-            <button className="btn btn-lg btn-primary">Complete trade</button>
-          </Link>
+      {/* <div className="centre">
+        <h3 className="centre"><span>You are trading <span className="tanzanite">{fund.name}</span></span></h3>
+      </div> */}
+      <div className="container midpoint">
+        <div className="columns midpoint">
+          <div className="column col-auto">
+            <FundCard key={fund.id} {...fund} 
+            />
+          </div>
+          <div className="column col-auto midpoint centre">
+            <Link to="/dashboard">
+              <button className="btn btn-lg btn-success">BUY</button>
+            </Link>
+            <br/>
+            <Link to="/dashboard">
+              <button className="btn btn-lg btn-error">SELL</button>
+            </Link>
+            <br/>
+            <button className="btn btn-primary btn-sm" onClick={() => this.props.history.goBack()}>
+              I changed my mind
+            </button>
+          </div>
         </div>
       </div>
     </>

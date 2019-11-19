@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 import FundFilter from '../funds/FundFilter'
 import FundCard from '../funds/FundCard'
@@ -72,48 +73,55 @@ class FundIndex extends React.Component {
     return filteredFunds
   }
 
-  // rankFunds() {
-
-  // }
-
   render() {
     if (!this.state.funds) return null
     console.log(this.state.funds)
     return (
       <>
-      <div className="centre">
-        <div>
-          <input
-            placeholder="Search by fund name"
+        <div className="columns">
+          <div className="column col-12 alignRight">
+            <Link to="/map">
+              <button className="btn btn-sm btn-primary vincoButton marginRight">back to map</button>
+            </Link>
+          </div>
+        </div>
+        <div className="column col-12 centre">
+          <input className="searchBar vinco"
+            placeholder="search by Fund name"
             onChange={this.handleChange}
             name="search"
           />
         </div>
-        <div>
-          <FundFilter
-            handleRegion={this.handleRegion}
-            handleHouse={this.handleHouse}
-            handleStructure={this.handleStructure}
-            handleStyles={this.handleStyles}
-          />
-        </div>
-      </div>
-      <div className="centre">
-        {this.fundFilter().length === 0
-          ?
-          <div>
-            <p>No funds availiable with that criteria, please revise your search</p>
+        <br/>
+        <div className="centre">
+          <div className="columns">
+            <FundFilter
+              handleRegion={this.handleRegion}
+              handleHouse={this.handleHouse}
+              handleStructure={this.handleStructure}
+              handleStyles={this.handleStyles}
+            />
           </div>
-          :
+        </div>
+        <section className="container">
+          <div className="columns">
+            {this.fundFilter().length === 0
+              ?
+              <div className="column col-12 centre">
+                <h3 className="vinco">no Funds availiable With that criteria</h3>
+                <h4 className="vinco">please revise your search</h4>
+              </div>
+              :
           <>
-              <div className="fundContainer">
+              <div className="column col-12 fundContainer">
                 {this.fundFilter().map(fund => (
                   <FundCard key={fund.id} {...fund} />
                 ))}
               </div>
           </> 
-        }
-      </div>
+            }
+          </div>
+        </section>
       </>
     )
   }

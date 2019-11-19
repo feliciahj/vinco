@@ -47,124 +47,130 @@ class DashboardEdit extends React.Component {
   render() {
     console.log(this.state)
     if (!this.state.data) return null
-    const { data, errors } = this.state
+    const { data } = this.state
     return (
-      <section className="formTemplate">
-        <div className="userForm form-group">
-          <form className="centre" onSubmit={this.handleSubmit}>
-            <div className="formBackground form-group">
-              <label>Title</label>
-              <input
-                className={`form-input col-12 ${errors.title ? 'is-error' : ''}`}
-                type="text"
-                id="title"
-                name="title"
-                placeholder="Title"
-                value={data.title}
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${errors.title ? 'Title is required' : ''}`}</p>
-
-              <label>First name</label>
-              <input
-                className={`form-input col-12 ${errors.first_name ? 'is-error' : ''}`}
-                type="text"
-                id="first_name"
-                name="first_name"
-                placeholder="First name"
-                value={data.first_name}
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${errors.first_name ? 'First name is required' : ''}`}</p>
-
-              <label>Surname</label>
-              <input
-                className={`form-input col-12 ${errors.last_name ? 'is-error' : ''}`}
-                type="text"
-                id="last_name"
-                name="last_name"
-                placeholder="Surname"
-                value={data.last_name}
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${errors.last_name ? 'Surname is required' : ''}`}</p>
-
-              <label>Username</label>
-              <input
-                className={`form-input col-12 ${errors.username ? 'is-error' : ''}`}
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Choose your username"
-                value={data.username}
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${errors.username ? 'A username is required' : ''}`}</p>
-
-              <label>Email</label>
-              <input
-                className={`form-input col-12 ${errors.email ? 'is-error' : ''}`}
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                value={data.email}
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${errors.email ? 'An email is required' : ''}`}</p>
-
-              <label>Date of birth (YYYY-MM-DD)</label>
-              <input
-                className={`form-input col-12 ${errors.dob ? 'is-error' : ''}`}
-                type="text"
-                id="dob"
-                name="dob"
-                placeholder="Date of birth"
-                value={data.dob}
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${errors.dob ? 'Date of birth is required' : ''}`}</p>
-
-              <label className="form-checkbox">
+      <div className="form-container">
+        <section className="formTemplate">
+          <div className="userForm form-group">
+            <h2 className="formHeading vinco">update my accouNt</h2>
+            <form className="centre"onSubmit={this.handleSubmit}>
+              <div className="formBackground form-group">
+                <label className="vincoBold">title</label>
                 <input
-                  className={`form-input col-12 ${errors.investing_virgin ? 'is-error' : ''}`}
-                  type="checkbox"
-                  name="investing_virgin"
-                  checked={data.investing_virgin}
+                  className={`form-input col-12 ${this.state.errors.title ? 'is-error' : ''}`}
+                  type="text"
+                  id="title"
+                  name="title"
+                  placeholder="TITLE"
+                  value={data.title}
                   onChange={this.handleChange}
                 />
-                <i className="form-icon"></i> New to investing?
-              </label>
-              <label>Password</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.password ? 'is-error' : ''}`}
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Password"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.password ? 'Passwords need to be a minimum of 8 charachters long and contain at least one number' : ''}`}</p>
-
-              <label>Password confirmation</label>
-              <input
-                className={`form-input col-12 ${this.state.errors.password_confirmation ? 'is-error' : ''}`}
-                type="password"
-                id="password_confirmation"
-                name="password_confirmation"
-                placeholder="Confirm your password"
-                onChange={this.handleChange}
-              />
-              <p className="form-input-hint">{`${this.state.errors.password_confirmation ? 'The passwords do not match' : ''}`}</p>
-
-              <br />
-              <div className="centre">
-                <button className="btn btn-primary btn-lg vinco" type="submit">update my accouNt</button>
+                {/* <p className="form-input-hint">{`${this.state.errors.title ? 'Title is required' : ''}`}</p> */}
+  
+                <label className="vincoBold">first name</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.first_name ? 'is-error' : ''}`}
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  placeholder="FIRST NAME"
+                  value={data.first_name}
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.first_name ? 'First name is required' : ''}`}</p> */}
+  
+                <label className="vincoBold">surname</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.last_name ? 'is-error' : ''}`}
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  placeholder="SURNAME"
+                  value={data.last_name}
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.last_name ? 'Surname is required' : ''}`}</p> */}
+  
+                <label className="vincoBold">username</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.username ? 'is-error' : ''}`}
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="CHOOSE YOUR USERNAME"
+                  value={data.username}
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.username ? 'A username is required' : ''}`}</p> */}
+  
+                <label className="vincoBold">email</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.email ? 'is-error' : ''}`}
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="EMAIL"
+                  value={data.email}
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.email ? 'An email is required' : ''}`}</p> */}
+  
+                <label className="vincoBold">date of birth (yyyy-mm-dd)</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.dob ? 'is-error' : ''}`}
+                  type="text"
+                  id="dob"
+                  name="dob"
+                  placeholder="DATE OF BIRTH"
+                  value={data.dob}
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.dob ? 'Date of birth is required' : ''}`}</p> */}
+  
+                <label className="form-checkbox vinco">
+                  <input 
+                    className={`form-input col-12 ${this.state.errors.investing_virgin ? 'is-error' : ''}`}
+                    type="checkbox"
+                    name="investing_virgin"
+                    checked={data.investing_virgin}
+                    onChange={this.handleChange}
+                  /> 
+                  <i className="form-icon"></i> new to investing? 
+                </label>
+  
+                <label className="vincoBold">password</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.password ? 'is-error' : ''}`}
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="PASSWORD"
+                  value={data.password}
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.password ? 'Passwords need to be a minimum of 8 charachters long and contain at least one number' : ''}`}</p> */}
+  
+                <label className="vincoBold">password confirmation</label>
+                <input
+                  className={`form-input col-12 ${this.state.errors.password_confirmation ? 'is-error' : ''}`}
+                  type="password"
+                  id="password_confirmation"
+                  name="password_confirmation"
+                  placeholder="CONFIRM YOUR PASSWORD"
+                  value={data.password_confirmation}
+                  onChange={this.handleChange}
+                />
+                {/* <p className="form-input-hint">{`${this.state.errors.password_confirmation ? 'The passwords do not match' : ''}`}</p> */}
+  
+                <br />
+                <div className="centre">
+                  <button className="btn btn-primary btn-sm vinco" type="submit">update my accouNt</button>
+                </div>
               </div>
-            </div>
-          </form>
-        </div>
-      </section>
+            </form>
+          </div>
+        </section>
+      </div>
     )
   }
 }

@@ -24,7 +24,9 @@ class FundShow extends React.Component {
     return (
       <section className="container">
         <div className="columns">
-          <div className="column col-12">MAP OF FUND FOCUS</div>
+          <div className="column col-12">
+            <img className="img-responsive img-fit-cover" src={fund.image} alt={fund.name}/>
+          </div>
           <h2 className="column col-6">{fund.name}</h2>
           <div className="column col-6">
             <Link to={{ pathname: '/trade', state: { fund } }}>
@@ -33,12 +35,14 @@ class FundShow extends React.Component {
             <Link to={{ pathname: '/dashboard', state: { from: fund } }}>
               <button className="btn btn-lg">Follow this fund</button>
             </Link>
+            <button className="btn vinco" onClick={() => this.props.history.goBack()}>
+              Back to funds
+            </button>
           </div>
           <div className="column col-6">
             <h3>HOW</h3>
             <div>Inception date: {fund.inception_date}</div>
             <div>Fund structure: {fund.structure.vehicle}</div>
-            {/* <div>Region info: {fund.region.description})</div> */}
             <div>Investment style:
               {fund.styles.map(style => (
                 <li key={style.name}>{style.name}</li>
@@ -47,9 +51,6 @@ class FundShow extends React.Component {
             <div>Sustainability rating: {fund.sustainability_rating}</div>
             <h6>Philiosophy and Process:</h6>
             <p>{fund.p_and_p}</p>
-            <div>
-              <img src={fund.image} alt={fund.name}/>
-            </div>
           </div>
           <div className="column col-6">
             <h3>HOW MUCH</h3>

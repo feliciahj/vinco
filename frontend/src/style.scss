@@ -8,17 +8,34 @@ $purple: rgb(67,18,128);
 $midnightblue: rgb(22,16,137);
 $emerald: rgb(24, 143, 0);
 $grey: rgb(83, 80, 88);
+$pink: rgb(253, 21, 214);
 
 html, body {
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
-  height: 100%
+  height: 100%;
 }
 
 // ****************************************   GENERAL   ****************************************
 
-.column {
-  border: solid;
+// .column {
+//   border: solid;
+// }
+
+.tanzanite {
+  color: $tanzanite;
+}
+
+.grey {
+  color: $grey;
+}
+
+.midnightblue {
+  color: $midnightblue;
+}
+
+.pink {
+  color: $pink;
 }
 
 .container {
@@ -59,6 +76,27 @@ html, body {
   font-weight: bold;
 }
 
+.vincoButton {
+  color: $tanzanite;
+  font-family: 'Major Mono Display', monospace;
+  background-color: $pink;
+}
+
+.borderBottom {
+  border-bottom: solid;
+  border-width: 1px;;
+}
+
+.alignRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.marginRight {
+  margin-right: 10px;
+}
+
 // ****************************************   HOMEPAGE   ****************************************
 
 .homeTitle {
@@ -85,48 +123,52 @@ html, body {
 // ****************************************   FUND INDEX   ****************************************
 
 .fundContainer {
-  // height: 100vh;
-  // width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.searchBar {
+ border-color: $pink;
+ border-width: 0.4px;
+ width: 500px;
 }
 
 // ****************************************   FUND CARD   ****************************************
 
 .card {
-  width: 400px;
-  height: 400px;
   padding: 10px;
-  margin: 10px;
+  margin: 50px;
 }
 
 .image {
   height: 150px;
-  width: 500px;
+  width: 440px;
   object-fit: cover;
 }
 
 .card-title.h4 {
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .card-subtitle {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .card-body {
   font-size: 12px;
+  list-style: none;
+}
+
+.investmentStyle {
+  font-size: 14px;
+  text-decoration: underline;
 }
 
 // ****************************************   MAP   ****************************************
 .map {
   height: 100vh;
   width: 100vw;
-  // display: flex;
-  // flex-wrap: wrap;
-  // flex-direction: column;
-  // justify-content: normal;
 }
 
 svg {

@@ -1,10 +1,10 @@
 import React from 'react'
 
 const FundFilter = ({ handleRegion, handleHouse, handleStructure, handleStyles }) => (
-  <form>
-    <div>
-      <h5>Region</h5>
-      <select name="region" onChange={handleRegion}>
+  <form className="columns">
+    <div className="column col-auto">
+      <h6 className="vinco">Region</h6>
+      <select name="region form-select dropdown" onChange={handleRegion}>
         <option value="All">All</option>
         <option value="Russia">Russia</option>
         <option value="Frontier Markets">Frontier Markets</option>
@@ -15,8 +15,8 @@ const FundFilter = ({ handleRegion, handleHouse, handleStructure, handleStyles }
         <option value="Global">Global</option>
       </select>
     </div>
-    <div>
-      <h5>Asset manager</h5>
+    <div className="column col-auto">
+      <h6 className="vinco">asset Manager</h6>
       <select name="house" onChange={handleHouse}>
         <option value="All">All</option>
         <option value="Franklin Templeton Investments">Franklin Templeton Investments</option>
@@ -29,8 +29,8 @@ const FundFilter = ({ handleRegion, handleHouse, handleStructure, handleStyles }
         <option value="DWS Group">DWS Group</option>
       </select>
     </div>
-    <div>
-      <h5>Asset structure</h5>
+    <div className="column col-auto">
+      <h6 className="vinco">Fund structure</h6>
       <select name="structure" onChange={handleStructure}>
         <option value="All">All</option>
         <option value="Unit Trust">Unit Trust</option>
@@ -41,8 +41,8 @@ const FundFilter = ({ handleRegion, handleHouse, handleStructure, handleStyles }
         <option value="ICVC">ICVC</option>
       </select>
     </div>
-    <div>
-      <h5>Fund style</h5>
+    <div className="column col-auto">
+      <h6 className="vinco">Fund style</h6>
       <select name="styles" onChange={handleStyles}>
         <option value="All">All</option>
         <option value="Concentrated">	Concentrated</option>

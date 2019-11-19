@@ -45,22 +45,36 @@ class Dashboard extends React.Component {
     const { user } = this.state
     return (
       <section className="container">
+        <br />
         <div className="columns">
-          <div className="column col-12">My dashboard</div>
-          <div className="column col-6">
-            <h3>{user.title} {user.first_name} {user.last_name}</h3>
-          </div>
-          <div className="column col-6">
-            <div>My followed funds:</div>
-          </div>
-          <div className="column col-12">My portfolio</div>
+          <br />
+          <h3 className="column col-12 vinco borderBottom">my dashboaRd</h3>
+          <button className="column col-12 btn btn-link vinco alignRight" onClick={() => this.props.history.goBack()}>
+              back
+          </button>
           <div className="column col-12">
+            <div>{user.title} {user.first_name} {user.last_name}</div>
+            <br/>
+            <div>Contact details: {user.email}</div>
+            <br/>
+            <div>Date of birth: {user.dob}</div>
+            <br/>
+            <Link to={'/dashboard/edit'} data={user} className="btn btn-success btn-sm vinco">
+                 edit My details
+            </Link>
+            <br/>
+            <br/>
+          </div>
+          <br/>
+          <h5 className="column col-12 vinco borderBottom">my poRtFolio</h5>
+          <br/>
+          <h5 className="column col-12 vinco borderBottom">FolloWed Funds</h5>
+          <div className="column col-12">
+            <br/>
             <>
-              <Link to={'/dashboard/edit'} data={user} className="btn btn-primary">
-                 Edit my account
-              </Link>
+              <br/>
               <span> </span>
-              <button onClick={this.handleDelete} className="btn btn-error">Delete my account</button>
+              <button onClick={this.handleDelete} className="btn btn-error btn-sm vinco">delete My accouNt</button>
             </>
           </div>
         </div>
