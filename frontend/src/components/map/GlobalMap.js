@@ -12,22 +12,36 @@ class GlobalMap extends React.Component {
     this.state = {
       clickedRegion: '',
       currentLayer: '',
-      regions: ''
+      regions: null
     }
 
     this.regions = [
-      ['sweden'],
-      ['brazil', 'russia', 'india', 'china', 'mexico', 'indonesia', 'south korea', 'turkey', 'colombia', 'indonesia', 'vietnam', 'egypt', 'turkey', 'south africa'],
-      ['argentina', 'Bahrain', 'Bangladesh', 'Burkina Faso', 'Benin', 'Croatia', 'Estonia', 'Guinea-Bissau', 'Ivory Coast', 'Jordan', 'Kenya', 'Kuwait', 'Lebanon', 'Lithuania', 'Kazakhstan', 'Mauritius', 'Mali', 'Morocco', 'Niger', 'Nigeria', 'Oman', 'Romania', 'Serbia', 'Senegal', 'Slovenia', 'Sri Lanka', 'Togo', 'Tunisia', 'Vietnam'],
-      ['Austria', 'Belgium', 'Denmark', 'Finland', 'France', 'Germany', 'Ireland', 'Italy', 'Netherlands', 'Norway', 'Portugal', 'Spain', 'Sweden', 'Switzerland', 'UK']
+      ['russia'],
+      ['turkey'],
+      ['kyushu', 'shikoku', 'honshu', 'hokkaido'],
+      ['india'],
+      ['britain', 'ulster'],
+      ['argentina', 'senegal', 'ivory coast','burkina fas', 'croatia', 'estonia', 'lithuania', 'kazakhstan', 'romania', 'serbia', 'slovenia', 'kenya', 'mauritius', 'morocco', 'nigeria', 'tunisia', 'bahrain', 'jordan', 'kuwait', 'lebanon', 'oman', 'bangladesh', 'sri lanka', 'vietnam'],
+      ['usa', 'sweden', 'norway', 'finland', 'denmark','china', 'australia', 'canada', 'israel', 'germany', 'france', 'ttaly', 'spain', 'singapore', 'south korea', 'taiwan']
     ]
 
     this.layerProps = {
-      onClick: e => this.setState({ clickedRegion: e.target.attributes.name.value.toLowerCase() }),
+      onClick: e => this.setState({ clickedRegion: this.isItRegion(e.target.attributes.name.value) }),
       onMouseEnter: e => this.setState({ currentLayer: e.target.attributes.id.value })
     }
 
     this.closeModal = this.closeModal.bind(this)
+  }
+
+  isItRegion(countryClicked) {
+    if (['kyushu', 'shikoku', 'honshu', 'hokkaido'].includes(countryClicked.toLowerCase())) return 'japan'
+    if (['britain', 'ulster'].includes(countryClicked.toLowerCase())) return 'uk'
+    if (['argentina', 'senegal', 'ivory coast','burkina fas', 'croatia', 'estonia', 'lithuania', 'kazakhstan', 'romania', 'serbia', 'slovenia', 'kenya', 'mauritius', 'morocco', 'nigeria', 'tunisia', 'bahrain', 'jordan', 'kuwait', 'lebanon', 'oman', 'bangladesh', 'sri lanka', 'vietnam'].includes(countryClicked.toLowerCase())) return 'frontier markets'
+    if (['usa', 'sweden', 'norway', 'finland', 'denmark', 'china', 'australia', 'canada', 'israel', 'germany', 'france', 'ttaly', 'spain', 'singapore', 'south korea', 'taiwan'].includes(countryClicked.toLowerCase())) return 'global'
+    if (['russia'].includes(countryClicked.toLowerCase())) return 'russia'
+    if (['turkey'].includes(countryClicked.toLowerCase())) return 'turkey'
+    if (['india'].includes(countryClicked.toLowerCase())) return 'india'
+    return countryClicked
   }
 
   closeModal() {
@@ -51,7 +65,9 @@ class GlobalMap extends React.Component {
   }
 
   render() {
-    const { clickedRegion } = this.state
+    if (!this.state.regions) return null
+    const { clickedRegion, regions } = this.state
+    console.log(regions)
     return (
       <>
       <div>
@@ -60,12 +76,11 @@ class GlobalMap extends React.Component {
           <div className="modal-container">
             <div className="modal-header">
               <a href="#close" className="btn btn-clear float-right" aria-label="Close" onClick={this.closeModal}></a>
-              <div className="modal-title h5">{this.state.clickedRegion}</div>
+              <div className="modal-title h5">{this.state.clickedRegion.toUpperCase()}</div>
             </div>
             <div className="modal-body">
               <div className="content">
-                {this.state.regions.description} description will go here once I have figured out how to pass the props down. 
-                {this.getClickedRegion().map(region => <p key={region}>{region}</p>)}
+                {regions.map(region => <p key={region.id}>{region.description}</p>)}
               </div>
             </div>
             <div className="modal-footer">
@@ -85,7 +100,6 @@ class GlobalMap extends React.Component {
 }
 
 export default GlobalMap
-
 
 
 

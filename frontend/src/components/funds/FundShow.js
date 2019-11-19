@@ -47,6 +47,9 @@ class FundShow extends React.Component {
             <div>Sustainability rating: {fund.sustainability_rating}</div>
             <h6>Philiosophy and Process:</h6>
             <p>{fund.p_and_p}</p>
+            <div>
+              <img src={fund.image} alt={fund.name}/>
+            </div>
           </div>
           <div className="column col-6">
             <h3>HOW MUCH</h3>

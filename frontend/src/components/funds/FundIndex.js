@@ -70,8 +70,13 @@ class FundIndex extends React.Component {
     return filteredFunds
   }
 
+  // rankFunds() {
+
+  // }
+
   render() {
     if (!this.state.funds) return null
+    console.log(this.state.funds)
     return (
       <>
       <div className="centre">

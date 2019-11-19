@@ -8,12 +8,11 @@ const FundFilter = ({ handleRegion, handleHouse, handleStructure, handleStyles }
         <option value="All">All</option>
         <option value="Russia">Russia</option>
         <option value="Frontier Markets">Frontier Markets</option>
-        <option value="Emerging Markets">Emerging Markets</option>
-        <option value="Europe">Europe</option>
+        <option value="Turkey">Turkey</option>
         <option value="Japan">Japan</option>
         <option value="India">India</option>
         <option value="UK">UK</option>
-        <option value="US">US</option>
+        <option value="Global">Global</option>
       </select>
     </div>
     <div>
@@ -35,34 +34,29 @@ const FundFilter = ({ handleRegion, handleHouse, handleStructure, handleStyles }
       <select name="structure" onChange={handleStructure}>
         <option value="All">All</option>
         <option value="Unit Trust">Unit Trust</option>
-        <option value="Other">Other</option>
-        <option value="OTHER">OTHER</option>
         <option value="ETF">ETF</option>
         <option value="SICAV">SICAV</option>
         <option value="Investment Trust">Investment Trust</option>
         <option value="OEIC">OEIC</option>
+        <option value="ICVC">ICVC</option>
       </select>
     </div>
     <div>
       <h5>Fund style</h5>
       <select name="styles" onChange={handleStyles}>
         <option value="All">All</option>
-        <option value="	Concentrated">	Concentrated</option>
+        <option value="Concentrated">	Concentrated</option>
         <option value="Food & agriculture">Food & agriculture</option>
         <option value="All-cap">All-cap</option>
         <option value="Large-cap">Large-cap</option>
         <option value="Small-cap">Small-cap</option>
-        <option value="OTHER">OTHER</option>
+        <option value="Healthcare">Healthcare</option>
         <option value="Index">Index</option>
         <option value="ESG">ESG</option>
         <option value="Technology">Technology</option>
-        <option value="Total return">Total return</option>
-        <option value="Multi-asset">Multi-asset</option>
-        <option value="Income">Income</option>
         <option value="Deep value">Deep value</option>
         <option value="Value">Value</option>
         <option value="Growth">Growth</option>
-        <option value="Medium-term">Medium-term</option>
         <option value="Long-term">Long-term</option>
       </select>
     </div>

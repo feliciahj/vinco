@@ -9,7 +9,8 @@ class NestedFundSerializer(serializers.ModelSerializer):
         model = Fund
         fields = (
             'id', 
-            'name', 
+            'name',
+            'image', 
             'p_and_p', 
             'people', 
             'house', 
@@ -93,7 +94,8 @@ class FundSerializer(serializers.ModelSerializer):
         model = Fund
         fields = (
             'id', 
-            'name', 
+            'name',
+            'image', 
             'p_and_p', 
             'people', 
             'house', 

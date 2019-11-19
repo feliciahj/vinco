@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const FundCard = ({ image, name, house, structure, region, styles, id }) => (
   <div className="card centre">
-    <div className="card-image">
-      <img src={image} className="img-responsive"/>
+    <div className="card-image centre">
+      <img className="image img-responsive" src={image} alt={name}/>
     </div>
     <div className="card-header">
       <div className="card-title h4">{name}</div>
