@@ -69,32 +69,32 @@ class GlobalMap extends React.Component {
     const { clickedRegion, regions } = this.state
     return (
       <>
-      <div>
-        <div className={`modal ${this.state.clickedRegion ? 'active' : ''}`} id="modal-id">
-          <a href="#close" className="modal-overlay" aria-label="Close" onClick={this.closeModal}></a>
-          <div className="modal-container">
-            <div className="modal-header">
-              <a href="#close" className="btn btn-clear float-right" aria-label="Close" onClick={this.closeModal}></a>
-              <div className="modal-title h5">{this.state.clickedRegion.toUpperCase()}</div>
-            </div>
-            <div className="modal-body">
-              <div className="content">
-                {regions
-                  .filter(reg => reg.region.toLowerCase() === clickedRegion)
-                  .map(region => <p key={region.id}>{region.description}</p>)}
+        <div>
+          <div className={`modal ${this.state.clickedRegion ? 'active' : ''}`} id="modal-id">
+            <a href="#close" className="modal-overlay" aria-label="Close" onClick={this.closeModal}></a>
+            <div className="modal-container">
+              <div className="modal-header">
+                <a href="#close" className="btn btn-clear float-right" aria-label="Close" onClick={this.closeModal}></a>
+                <div className="modal-title h5">{this.state.clickedRegion.toUpperCase()}</div>
+              </div>
+              <div className="modal-body">
+                <div className="content">
+                  {regions
+                    .filter(reg => reg.region.toLowerCase() === clickedRegion)
+                    .map(region => <p key={region.id}>{region.description}</p>)}
+                </div>
+              </div>
+              <div className="modal-footer">
+                <Link to={{ pathname: '/funds', state: { from: clickedRegion } }}>
+                  <button className="btn">Take me to the {clickedRegion.toUpperCase()} funds</button>
+                </Link>
               </div>
             </div>
-            <div className="modal-footer">
-              <Link to={{ pathname: '/funds', state: { from: clickedRegion } }}>
-                <button className="btn">Take me to the {clickedRegion.toUpperCase()} funds</button>
-              </Link>
-            </div>
+          </div>
+          <div className="map">
+            <VectorMap {...mapData} layerProps={this.layerProps} currentLayers={this.getRegion()}/>     
           </div>
         </div>
-        <div className="map">
-          <VectorMap {...mapData} layerProps={this.layerProps} currentLayers={this.getRegion()}/>     
-        </div>
-      </div>
   </>
     )
   }

@@ -87,7 +87,7 @@ class FundIndex extends React.Component {
         </div>
         <div className="column col-12 centre">
           <input className="searchBar vinco"
-            placeholder="search by Fund name"
+            placeholder="search by fund name"
             onChange={this.handleChange}
             name="search"
           />
@@ -108,7 +108,7 @@ class FundIndex extends React.Component {
             {this.fundFilter().length === 0
               ?
               <div className="column col-12 centre">
-                <h3 className="vinco">no Funds availiable With that criteria</h3>
+                <h3 className="vinco">no funds availiable with that criteria</h3>
                 <h4 className="vinco">please revise your search</h4>
               </div>
               :

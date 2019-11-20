@@ -10,7 +10,14 @@ class Home extends React.Component {
   render() {
     return (
       <>
-      <h1 className="container midpoint vinco homeTitle">VINco</h1>
+      <div className="container midpoint">
+        <h1 className="vinco homeTitle">VINco</h1>
+        <div className="centre">
+          <span className="line"></span>
+        </div>
+        <br/>
+        <p>[conquer your financial future]</p>
+      </div>
       </>
     )
   }

@@ -17,9 +17,6 @@ class Trade extends React.Component {
     const fund = this.props.location.state.fund
     return (
       <>
-      {/* <div className="centre">
-        <h3 className="centre"><span>You are trading <span className="tanzanite">{fund.name}</span></span></h3>
-      </div> */}
       <div className="container midpoint">
         <div className="columns midpoint">
           <div className="column col-auto">

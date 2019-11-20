@@ -103,18 +103,24 @@ html, body {
   font-size: 150px;
 }
 
+.line {
+  height: 2px;
+  width: 500px;
+  background-color: black;
+}
+
 // ****************************************   NAVBAR   ****************************************
 
 .logo {
   color: $tanzanite;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: bold;
   font-family: 'Major Mono Display', monospace;
 }
 
 .navItem {
   color: $tanzanite;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
   font-family: 'Major Mono Display', monospace;
 }
@@ -129,9 +135,32 @@ html, body {
 }
 
 .searchBar {
- border-color: $pink;
- border-width: 0.4px;
+ border-color: $tanzanite;
+ border-width: 1px;
  width: 500px;
+}
+
+// ****************************************   FUND SHOWPAGE   ****************************************
+
+.coverImage {
+  padding: 0px;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.smallHeading {
+  font-size: 15px;
+  color: $tanzanite;
+}
+
+.mediumHeading {
+  font-size: 20px;
+  color: $tanzanite;
+  font-weight: bold;
+}
+
+.toCome {
+  font-style: italic;
 }
 
 // ****************************************   FUND CARD   ****************************************
@@ -192,7 +221,6 @@ svg {
 .form-container {
   height: 100%;
   width: 100%;
-  // transform: scale(0.9);
 
   .formTemplate {
     height: 80%;
@@ -208,7 +236,8 @@ svg {
   
       .formHeading {
         text-align: center;
-        color: $grey;
+        color: black;
+        font-family: 'Major Mono Display', monospace;
       }
     
       .formBackground {

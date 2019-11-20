@@ -27,7 +27,7 @@ class Login extends React.Component {
     axios.post('/api/login', this.state.data)
       .then(res => {
         Auth.setToken(res.data.token)
-        this.props.history.push('/dashboard')
+        this.props.history.push('/map')
       })
       .catch(err => console.log(err))
   }
@@ -39,7 +39,7 @@ class Login extends React.Component {
       <div className="container midpoint">
         <section className="formTemplate">
           <div className="userForm form-group">
-            <h2 className="formHeading vinco">WelcoMe bacK!</h2>
+            <h2 className="formHeading">welcome back!</h2>
             <form className="centre" onSubmit={this.handleSubmit}>
               <div className="formBackground form-group centre">
                 <label className="centre form-label vinco login" htmlFor="email">Email</label>
@@ -64,7 +64,7 @@ class Login extends React.Component {
                 {/* {this.state.error && <p className="form-input-hint is-error">{this.state.error}</p>} */}
                 <br />
                 <div className="centre">
-                  <button className="btn btn-primary vinco" type="submit">logIN</button>
+                  <button className="btn btn-primary vinco" type="submit">login</button>
                 </div>
               </div>
             </form>
