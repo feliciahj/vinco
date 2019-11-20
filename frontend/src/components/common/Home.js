@@ -12,7 +12,7 @@ class Home extends React.Component {
     return (
       <>
       <div className="container almostMidpoint">
-        <Link style={{ textDecoration: 'none' }} to="/funds">
+        <Link style={{ textDecoration: 'none' }} to="/login">
           <h1 className="vinco homeTitle">VINco</h1>
         </Link>
         <div className="centre">
