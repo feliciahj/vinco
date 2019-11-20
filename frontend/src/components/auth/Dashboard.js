@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
         <div className="columns">
           <div className="column col-12 spaceBetween">
             <div className="popover popover-right">
-              <button className="btn btn-success btn-sm">Personal info</button>
+              <button className="btn btn-success btn-sm">personal info</button>
               <div className="popover-container dashboardCard">
                 <div className="card dashboardCard">
                   <div className="card-header">
@@ -65,7 +65,7 @@ class Dashboard extends React.Component {
                     <Link to={'/dashboard/edit'} data={user} className="btn btn-link btn-sm">
                       EDIT
                     </Link>
-                    <button onClick={this.handleDelete} className="btn btn-error btn-sm">Delete my account</button>
+                    <button onClick={this.handleDelete} className="btn btn-error btn-sm">delete my account</button>
                   </div>
                 </div>
               </div>

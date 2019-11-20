@@ -92,7 +92,7 @@ class Register extends React.Component {
                 />
                 {/* <p className="form-input-hint">{`${this.state.errors.email ? 'An email is required' : ''}`}</p> */}
 
-                <label>date of birth (yyyy-mm-dd)</label>
+                <label>date of birth (YYYY-MM-DD)</label>
                 <input
                   className={`form-input col-12 ${this.state.errors.dob ? 'is-error' : ''}`}
                   type="text"
@@ -138,7 +138,7 @@ class Register extends React.Component {
 
                 <br />
                 <div className="centre">
-                  <button className="btn btn-primary btn-sm" type="submit">create my <span className="vincoWhite">VINco</span> account</button>
+                  <button className="btn btn-primary btn-sm" type="submit">open <span className="vincoWhite">VINco</span> account</button>
                 </div>
               </div>
             </form>

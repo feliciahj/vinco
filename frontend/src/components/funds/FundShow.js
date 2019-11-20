@@ -26,16 +26,16 @@ class FundShow extends React.Component {
         <div className="columns">
           <img className="column col-12 coverImage" src={fund.image} alt={fund.name}/>
           <h2 className="column col-6">{fund.name}</h2>
-          <div className="column col-6 alignRight">
+          <div className="column col-6 alignRight spaceBetween">
             <br/>
             <Link to={{ pathname: '/trade', state: { fund } }}>
-              <button className="btn btn-sm btn-success">Trade this fund</button>
+              <button className="btn btn-sm btn-success">trade this fund</button>
             </Link>
             <Link to={{ pathname: '/dashboard', state: { from: fund } }}>
-              <button className="btn btn-sm btn-primary">Follow this fund</button>
+              <button className="btn btn-sm btn-primary">follow this fund</button>
             </Link>
             <button className="btn btn-sm" onClick={() => this.props.history.goBack()}>
-              Back to funds
+              back to funds
             </button>
           </div>
           <div className="column col-6">

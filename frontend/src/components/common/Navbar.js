@@ -21,12 +21,12 @@ class Navbar extends React.Component {
           <Link className="btn btn-link nav-item logo" to="/">VINco</Link>
         </div>
         <div className="input-group input-inline nav-links">
-          {localStorage.token && <Link className="btn btn-link nav-item navItem" to="/funds">browse funds</Link>}
-          {localStorage.token && <Link className="btn btn-link nav-item navItem" to="/map">map</Link>}
-          {!localStorage.token && <Link className="btn btn-link nav-item navItem" to="/register">open account</Link>}
-          {!localStorage.token && <Link className="btn btn-link nav-item navItem" to="/login">login</Link>}
-          {localStorage.token && <Link className="btn btn-link nav-item navItem" to="/dashboard">dashboard</Link>}
-          {localStorage.token && <a onClick={this.handleLogout} className="btn btn-link nav-item navItem">logout</a>}
+          {localStorage.token && <Link className="btn btn-link nav-item navItem tanzanite" to="/funds">browse funds</Link>}
+          {localStorage.token && <Link className="btn btn-link nav-item navItem tanzanite" to="/map">map</Link>}
+          {!localStorage.token && <Link className="btn btn-link nav-item navItem tanzanite" to="/register">open account</Link>}
+          {!localStorage.token && <Link className="btn btn-link nav-item navItem tanzanite" to="/login">login</Link>}
+          {localStorage.token && <Link className="btn btn-link nav-item navItem tanzanite" to="/dashboard">dashboard</Link>}
+          {localStorage.token && <a onClick={this.handleLogout} className="btn btn-link nav-item navItem tanzanite">logout</a>}
         </div>
       </nav>
     )

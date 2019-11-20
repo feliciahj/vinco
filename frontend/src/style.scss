@@ -65,6 +65,14 @@ html, body {
   justify-content: center;
 }
 
+.almostMidpoint {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 70px;
+}
+
 .vinco {
   color: $tanzanite;
   font-family: 'Major Mono Display', monospace;
@@ -115,12 +123,24 @@ html, body {
   margin-left: 10px;
 }
 
+.btn {
+  transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
 
 // ****************************************   HOMEPAGE   ****************************************
 
 h1.homeTitle {
   font-size: 150px;
-  margin: 20px;
+  margin-bottom: 20px;
+  transition: all .2s ease-in-out;
+}
+
+.homeTitle:hover {
+  transform: scale(1.05);
 }
 
 .line {
@@ -142,8 +162,12 @@ h1.homeTitle {
   color: $tanzanite;
   font-size: 17px;
   font-weight: bold;
+  transition: all .2s ease-in-out;
 }
 
+.navItem:hover {
+  transform: scale(1.05);
+}
 
 // ****************************************   FUND INDEX   ****************************************
 
@@ -156,7 +180,8 @@ h1.homeTitle {
 .searchBar {
   border-color: $tanzanite;
   border-width: 1px;
-  width: 500px;
+  width: 600px;
+  height: 30px;
   border: none;
   font-style: italic;
   outline: none;

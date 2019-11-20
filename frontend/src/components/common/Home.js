@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class Home extends React.Component {
   constructor() {
@@ -10,13 +11,15 @@ class Home extends React.Component {
   render() {
     return (
       <>
-      <div className="container midpoint">
-        <h1 className="vinco homeTitle">VINco</h1>
+      <div className="container almostMidpoint">
+        <Link style={{ textDecoration: 'none' }} to="/funds">
+          <h1 className="vinco homeTitle">VINco</h1>
+        </Link>
         <div className="centre">
-          <span className="line"></span>
+          <span className="line grey"></span>
         </div>
         <br/>
-        <p>[conquer investing]</p>
+        <h5 className="grey">[conquer investing]</h5>
       </div>
       </>
     )

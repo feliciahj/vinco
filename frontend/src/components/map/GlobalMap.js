@@ -69,6 +69,7 @@ class GlobalMap extends React.Component {
     const { clickedRegion, regions } = this.state
     return (
       <>
+      {/* <div className="">Pick a region</div> */}
         <div>
           <div className={`modal ${this.state.clickedRegion ? 'active' : ''}`} id="modal-id">
             <a href="#close" className="modal-overlay" aria-label="Close" onClick={this.closeModal}></a>
