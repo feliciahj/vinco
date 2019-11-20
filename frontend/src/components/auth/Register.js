@@ -34,10 +34,10 @@ class Register extends React.Component {
       <div className="form-container">
         <section className="formTemplate">
           <div className="userForm form-group">
-            <h2 className="formHeading vinco">open account</h2>
+            <h2 className="formHeading">open account</h2>
             <form className="centre"onSubmit={this.handleSubmit}>
               <div className="formBackground form-group">
-                <label className="vincoBold">title</label>
+                <label>title</label>
                 <input
                   className={`form-input col-12 ${this.state.errors.title ? 'is-error' : ''}`}
                   type="text"
@@ -48,7 +48,7 @@ class Register extends React.Component {
                 />
                 {/* <p className="form-input-hint">{`${this.state.errors.title ? 'Title is required' : ''}`}</p> */}
 
-                <label className="vincoBold">first name</label>
+                <label>first name</label>
                 <input
                   className={`form-input col-12 ${this.state.errors.first_name ? 'is-error' : ''}`}
                   type="text"
@@ -59,7 +59,7 @@ class Register extends React.Component {
                 />
                 {/* <p className="form-input-hint">{`${this.state.errors.first_name ? 'First name is required' : ''}`}</p> */}
 
-                <label className="vincoBold">surname</label>
+                <label>surname</label>
                 <input
                   className={`form-input col-12 ${this.state.errors.last_name ? 'is-error' : ''}`}
                   type="text"
@@ -70,7 +70,7 @@ class Register extends React.Component {
                 />
                 {/* <p className="form-input-hint">{`${this.state.errors.last_name ? 'Surname is required' : ''}`}</p> */}
 
-                <label className="vincoBold">username</label>
+                <label>username</label>
                 <input
                   className={`form-input col-12 ${this.state.errors.username ? 'is-error' : ''}`}
                   type="text"
@@ -81,7 +81,7 @@ class Register extends React.Component {
                 />
                 {/* <p className="form-input-hint">{`${this.state.errors.username ? 'A username is required' : ''}`}</p> */}
 
-                <label className="vincoBold">email</label>
+                <label>email</label>
                 <input
                   className={`form-input col-12 ${this.state.errors.email ? 'is-error' : ''}`}
                   type="email"
@@ -92,7 +92,7 @@ class Register extends React.Component {
                 />
                 {/* <p className="form-input-hint">{`${this.state.errors.email ? 'An email is required' : ''}`}</p> */}
 
-                <label className="vincoBold">date of birth (yyyy-mm-dd)</label>
+                <label>date of birth (yyyy-mm-dd)</label>
                 <input
                   className={`form-input col-12 ${this.state.errors.dob ? 'is-error' : ''}`}
                   type="text"
@@ -103,7 +103,7 @@ class Register extends React.Component {
                 />
                 {/* <p className="form-input-hint">{`${this.state.errors.dob ? 'Date of birth is required' : ''}`}</p> */}
 
-                <label className="form-checkbox vinco">
+                <label className="form-checkbox">
                   <input 
                     className={`form-input col-12 ${this.state.errors.investing_virgin ? 'is-error' : ''}`}
                     type="checkbox"
@@ -114,7 +114,7 @@ class Register extends React.Component {
                   <i className="form-icon"></i> new to investing? 
                 </label>
 
-                <label className="vincoBold">password</label>
+                <label>password</label>
                 <input
                   className={`form-input col-12 ${this.state.errors.password ? 'is-error' : ''}`}
                   type="password"
@@ -125,7 +125,7 @@ class Register extends React.Component {
                 />
                 {/* <p className="form-input-hint">{`${this.state.errors.password ? 'Passwords need to be a minimum of 8 charachters long and contain at least one number' : ''}`}</p> */}
 
-                <label className="vincoBold">password confirmation</label>
+                <label>password confirmation</label>
                 <input
                   className={`form-input col-12 ${this.state.errors.password_confirmation ? 'is-error' : ''}`}
                   type="password"
@@ -138,7 +138,7 @@ class Register extends React.Component {
 
                 <br />
                 <div className="centre">
-                  <button className="btn btn-primary btn-sm vinco" type="submit">create my VINco account</button>
+                  <button className="btn btn-primary btn-sm" type="submit">create my <span className="vincoWhite">VINco</span> account</button>
                 </div>
               </div>
             </form>

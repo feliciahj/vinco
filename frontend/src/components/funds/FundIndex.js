@@ -15,7 +15,8 @@ class FundIndex extends React.Component {
       focus: 'All',
       styles: 'All',
       house: 'All',
-      structure: 'All'
+      structure: 'All',
+      filteredList: []
     }
     this.handleStyles = this.handleStyles.bind(this)
     this.handleHouse = this.handleHouse.bind(this)
@@ -26,35 +27,36 @@ class FundIndex extends React.Component {
 
   componentDidMount() {
     axios.get('/api/funds')
-      .then(res => this.setState({ funds: res.data }))
+      .then(res => this.setState({ funds: res.data }, this.fundFilter))
       .catch(err => console.log(err))
   }
 
   handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value }, this.fundFilter)
   }
 
   handleRegion(e) {
-    this.setState({ focus: e.target.value })
+    this.setState({ focus: e.target.value }, this.fundFilter)
   }
 
   handleStyles(e) {
-    this.setState({ styles: e.target.value })
+    this.setState({ styles: e.target.value }, this.fundFilter)
   }
 
   handleHouse(e) {
-    this.setState({ house: e.target.value })
+    this.setState({ house: e.target.value }, this.fundFilter)
   }
 
   handleStructure(e) {
-    this.setState({ structure: e.target.value })
+    this.setState({ structure: e.target.value }, this.fundFilter)
   }
 
   fundFilter() {
+    if (!this.state.funds) return null
     if (this.props.location.state) {
       const filtered = this.state.funds.filter(fund => fund.region.region.toLowerCase() === this.props.location.state.from)
       this.props.location.state = ''
-      return filtered
+      return this.setState({ filteredList: filtered })
     }
     const { styles, house, structure, search, focus } = this.state
     const re = new RegExp(search, 'i')
@@ -70,12 +72,11 @@ class FundIndex extends React.Component {
       &&
       ((fund.styles.find(style => style.name === styles) || styles === 'All'))
     })
-    return filteredFunds
+    return this.setState({ filteredList: filteredFunds })
   }
 
   render() {
     if (!this.state.funds) return null
-    console.log(this.state.funds)
     return (
       <>
         <div className="columns">
@@ -86,7 +87,7 @@ class FundIndex extends React.Component {
           </div>
         </div>
         <div className="column col-12 centre">
-          <input className="searchBar vinco"
+          <input className="searchBar"
             placeholder="search by fund name"
             onChange={this.handleChange}
             name="search"
@@ -105,18 +106,19 @@ class FundIndex extends React.Component {
         </div>
         <section className="container">
           <div className="columns">
-            {this.fundFilter().length === 0
+            {this.state.filteredList.length === 0
               ?
               <div className="column col-12 centre">
-                <h3 className="vinco">no funds availiable with that criteria</h3>
-                <h4 className="vinco">please revise your search</h4>
+                <h3>no funds availiable with that criteria</h3>
+                <h4>please revise your search</h4>
               </div>
               :
           <>
               <div className="column col-12 fundContainer">
-                {this.fundFilter().map(fund => (
-                  <FundCard key={fund.id} {...fund} />
-                ))}
+                {this.state.filteredList.map(fund => {
+                  // console.log(fund)
+                  return <FundCard key={fund.id} {...fund} />
+                })}
               </div>
           </> 
             }

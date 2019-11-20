@@ -45,37 +45,40 @@ class Dashboard extends React.Component {
     const { user } = this.state
     return (
       <section className="container">
-        <br />
+        <br/>
+        <br/>
         <div className="columns">
-          <br />
-          <h3 className="column col-12 vinco borderBottom">my dashboaRd</h3>
-          <button className="column col-12 btn btn-link vinco alignRight" onClick={() => this.props.history.goBack()}>
-              back
-          </button>
-          <div className="column col-12">
-            <div>{user.title} {user.first_name} {user.last_name}</div>
-            <br/>
-            <div>Contact details: {user.email}</div>
-            <br/>
-            <div>Date of birth: {user.dob}</div>
-            <br/>
-            <Link to={'/dashboard/edit'} data={user} className="btn btn-success btn-sm vinco">
-                 edit My details
-            </Link>
-            <br/>
-            <br/>
+          <div className="column col-12 spaceBetween">
+            <div className="popover popover-right">
+              <button className="btn btn-success btn-sm">Personal info</button>
+              <div className="popover-container dashboardCard">
+                <div className="card dashboardCard">
+                  <div className="card-header">
+                    {user.title} {user.first_name} {user.last_name}
+                  </div>
+                  <div className="card-body">
+                    <div>Contact details: {user.email}</div>
+                    <br/>
+                    <div>Date of birth: {user.dob}</div>
+                  </div>
+                  <div className="card-footer spaceBetween">
+                    <Link to={'/dashboard/edit'} data={user} className="btn btn-link btn-sm">
+                      EDIT
+                    </Link>
+                    <button onClick={this.handleDelete} className="btn btn-error btn-sm">Delete my account</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button className="btn btn-primary btn-sm" onClick={() => this.props.history.goBack()}>BACK</button>
           </div>
-          <br/>
-          <h5 className="column col-12 vinco borderBottom">my poRtFolio</h5>
-          <br/>
-          <h5 className="column col-12 vinco borderBottom">FolloWed Funds</h5>
-          <div className="column col-12">
-            <br/>
-            <>
-              <br/>
-              <span> </span>
-              <button onClick={this.handleDelete} className="btn btn-error btn-sm vinco">delete My accouNt</button>
-            </>
+          <div className="portfolioColumns">
+            <div className="portfolio borderRight marginRight">
+              <h3 className="tanzanite marginLeft">MY PORTFOLIO</h3>
+            </div>
+            <div className="followed">
+              <h4 className="tanzanite">FOLLOWED FUNDS</h4>
+            </div>
           </div>
         </div>
       </section >

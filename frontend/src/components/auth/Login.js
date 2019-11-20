@@ -42,7 +42,7 @@ class Login extends React.Component {
             <h2 className="formHeading">welcome back!</h2>
             <form className="centre" onSubmit={this.handleSubmit}>
               <div className="formBackground form-group centre">
-                <label className="centre form-label vinco login" htmlFor="email">Email</label>
+                <label className="centre form-label login" htmlFor="email">Email</label>
                 <input 
                   className={`form-input col-7 ${this.state.error ? 'is-error' : ''}`}
                   name="email" 
@@ -52,7 +52,7 @@ class Login extends React.Component {
                   onChange={this.handleChange}/>
                 {/* <p className="form-input-hint">{`${this.state.error ? 'Incorrect password' : ''}`}</p> */}
               
-                <label className="form-label vinco login" htmlFor="password">passWord</label>
+                <label className="form-label login" htmlFor="password">passWord</label>
                 <input 
                   className={`form-input col-7 ${this.state.error ? 'is-error' : ''}`}
                   name="password" 
@@ -64,7 +64,7 @@ class Login extends React.Component {
                 {/* {this.state.error && <p className="form-input-hint is-error">{this.state.error}</p>} */}
                 <br />
                 <div className="centre">
-                  <button className="btn btn-primary vinco" type="submit">login</button>
+                  <button className="btn btn-primary" type="submit">login</button>
                 </div>
               </div>
             </form>

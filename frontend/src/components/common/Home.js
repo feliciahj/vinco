@@ -16,7 +16,7 @@ class Home extends React.Component {
           <span className="line"></span>
         </div>
         <br/>
-        <p>[conquer your financial future]</p>
+        <p>[conquer investing]</p>
       </div>
       </>
     )

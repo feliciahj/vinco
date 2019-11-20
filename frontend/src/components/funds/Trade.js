@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import FundCard from './FundCard'
+import ShortFundCard from './ShortFundCard'
 
 class Trade extends React.Component {
   constructor() {
@@ -20,7 +20,7 @@ class Trade extends React.Component {
       <div className="container midpoint">
         <div className="columns midpoint">
           <div className="column col-auto">
-            <FundCard key={fund.id} {...fund} 
+            <ShortFundCard key={fund.id} {...fund} 
             />
           </div>
           <div className="column col-auto midpoint centre">
@@ -32,8 +32,10 @@ class Trade extends React.Component {
               <button className="btn btn-lg btn-error">SELL</button>
             </Link>
             <br/>
-            <button className="btn btn-primary btn-sm" onClick={() => this.props.history.goBack()}>
-              I changed my mind
+            <br/>
+            <br/>
+            <button className="btn btn-link btn-sm" onClick={() => this.props.history.goBack()}>
+              BACK
             </button>
           </div>
         </div>
