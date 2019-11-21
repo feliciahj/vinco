@@ -59,7 +59,6 @@ const FundFilter = ({ focus, styles, house, structure, handleRegion, handleHouse
         <option className={styles === 'Long-term' ? 'styles' : 'none'} value="Long-term">Long-term</option>
       </div>
     </div>
-
   </form>
 
 )
