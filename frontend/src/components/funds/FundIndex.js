@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 
 import FundFilter from '../funds/FundFilter'
 import FundCard from '../funds/FundCard'
@@ -92,6 +91,10 @@ class FundIndex extends React.Component {
         <div className="centre">
           <div className="columns">
             <FundFilter
+              focus={this.state.focus}
+              styles={this.state.styles}
+              house={this.state.house}
+              structure={this.state.structure}
               handleRegion={this.handleRegion}
               handleHouse={this.handleHouse}
               handleStructure={this.handleStructure}

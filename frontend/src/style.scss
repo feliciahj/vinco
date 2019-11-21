@@ -157,6 +157,10 @@ h1.homeTitle {
   transform: scale(1.05);
 }
 
+.btn:focus {
+  outline: !important none;
+}
+
 // ****************************************   FUND INDEX   ****************************************
 
 .fundContainer {
@@ -184,12 +188,46 @@ h1.homeTitle {
   background: white;
 }
 
-select {
-  width: 230px;
-  background: $lightpink;
-  border: none;
-  outline: none;
+// .filterHeading {
+//   width: 100px;
+//   background: $lightpink;
+//   // border: none;
+//   // outline: none;
+// }
+
+.focus {
+  background: rgba(4, 196, 29, 0.705);
+  color: white;
 }
+
+.house {
+  background: rgba(47, 61, 255, 0.692);
+  color: white;
+}
+
+.structure {
+  background: rgba(251, 255, 2, 0.945);
+  color: $grey;
+}
+
+.styles {
+  background: rgba(207, 10, 207, 0.815);
+  color: white;
+}
+
+.none {
+  background: none;
+}
+
+// .filter:hover {
+//   background: $pink;
+//   color: white;
+// }
+
+// .filter:active {
+//   background: greenyellow;
+//   color: white;
+// }
 
 // ****************************************   FUND SHOWPAGE   ****************************************
 
