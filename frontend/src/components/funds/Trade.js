@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import ShortFundCard from './ShortFundCard'
+import TradeFundCard from './TradeFundCard'
 
 class Trade extends React.Component {
   constructor() {
@@ -20,7 +20,7 @@ class Trade extends React.Component {
       <div className="container midpoint">
         <div className="columns midpoint">
           <div className="column col-auto">
-            <ShortFundCard key={fund.id} {...fund} 
+            <TradeFundCard key={fund.id} {...fund} 
             />
           </div>
           <div className="column col-auto midpoint centre">

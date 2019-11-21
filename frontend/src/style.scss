@@ -20,10 +20,6 @@ html, body {
 
 // ****************************************   GENERAL   ****************************************
 
-// .column {
-//   border: solid;
-// }
-
 .tanzanite {
   color: $tanzanite;
 }
@@ -87,11 +83,6 @@ html, body {
   font-weight: bold;
 }
 
-.vincoButton {
-  color: $tanzanite;
-  background-color: $pink;
-}
-
 .borderBottom {
   border-bottom: solid;
   border-width: 1px;
@@ -116,6 +107,10 @@ html, body {
   margin-left: 10px;
 }
 
+.marginTop {
+  margin-top: 50px;
+}
+
 .btn {
   transition: all .2s ease-in-out;
 }
@@ -135,12 +130,6 @@ h1.homeTitle {
 .homeTitle:hover {
   transform: scale(1.05);
 }
-
-// This should remove the blue outline once clicked, but need to adjust something because it is still not quite working:
-
-// .homeTitle:focus {
-//   outline: none;
-// }
 
 .line {
   height: 2px;
@@ -173,11 +162,11 @@ h1.homeTitle {
 .fundContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .searchBar {
-  border-color: $tanzanite;
+  background: $lightpink;
   border-width: 1px;
   width: 600px;
   height: 30px;
@@ -187,8 +176,12 @@ h1.homeTitle {
 }
 
 .searchBar:hover {
-  background: $lightpink;
-  color: $tanzanite;
+  background: $tanzanite;
+  color: white;
+}
+
+.searchbar:focus {
+  background: white;
 }
 
 select {
@@ -224,8 +217,10 @@ select {
 // ****************************************   FUND CARD   ****************************************
 
 .card {
-  padding: 10px;
-  margin: 50px;
+  width: 300px;
+  height: 300px;
+  padding: 7px;
+  margin: 30px;
   transition: all .2s ease-in-out;
 }
 
@@ -234,37 +229,33 @@ select {
 }
 
 .image {
-  height: 150px;
-  width: 440px;
+  height: 100px;
+  width: 300px;
   object-fit: cover;
 }
 
 .card-title.h4 {
-  font-size: 19px;
+  font-size: 13px;
 }
 
 .card-subtitle {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .card-body {
-  font-size: 12px;
+  font-size: 10px;
   list-style: none;
 }
 
 .investmentStyle {
-  font-size: 14px;
+  font-size: 10px;
   text-decoration: underline;
 }
 
 // ****************************************   MAP   ****************************************
-.map {
-  height: 100vh;
-  width: 100vw;
-}
 
 svg {
-  stroke: rgb(253, 21, 214);
+  stroke: $pink;
   stroke-width: 0.4px;
 
   path {
@@ -275,6 +266,21 @@ svg {
     &[aria-current='true'] {
       fill: $tanzanite;
     }
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background:rgba(255, 255, 255, 0.863);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  h2 {
+    transform: translateY(-50px);
+    font-size: 75px;
   }
 }
 

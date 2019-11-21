@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import Auth from '../../../lib/auth'
+import { Link } from 'react-router-dom'
 
 class Login extends React.Component {
   constructor() {
@@ -65,6 +66,12 @@ class Login extends React.Component {
                 <br />
                 <div className="centre">
                   <button className="btn btn-primary" type="submit">login</button>
+                </div>
+                <div>
+                  <Link to="/register">
+                    <br/>
+                    <button className="btn btn-link">don't have an account?</button>
+                  </Link>
                 </div>
               </div>
             </form>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShortFundCard = ({ image, name, house, structure, region }) => (
+const TradeFundCard = ({ image, name, house, structure, region }) => (
   <div className="card">
     <div className="card-image centre">
       <img className="image img-responsive" src={image} alt={name}/>
@@ -15,4 +15,4 @@ const ShortFundCard = ({ image, name, house, structure, region }) => (
   </div>
 )
 
-export default ShortFundCard
+export default TradeFundCard

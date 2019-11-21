@@ -80,13 +80,8 @@ class FundIndex extends React.Component {
     return (
       <>
         <div className="columns">
-          <div className="column col-12 alignRight">
-            <Link to="/map">
-              <button className="btn btn-sm btn-primary vincoButton marginRight">back to map</button>
-            </Link>
-          </div>
         </div>
-        <div className="column col-12 centre">
+        <div className="column col-12 centre marginTop">
           <input className="searchBar"
             placeholder="search by fund name"
             onChange={this.handleChange}
@@ -109,7 +104,7 @@ class FundIndex extends React.Component {
             {this.state.filteredList.length === 0
               ?
               <div className="column col-12 centre">
-                <h3>no funds availiable with that criteria</h3>
+                <h3 className="marginTop">no funds availiable with that criteria.</h3>
                 <h4>please revise your search</h4>
               </div>
               :

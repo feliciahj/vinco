@@ -12,7 +12,8 @@ class GlobalMap extends React.Component {
     this.state = {
       clickedRegion: '',
       currentLayer: '',
-      regions: null
+      regions: null,
+      overlay: true
     }
 
     this.regions = [
@@ -62,6 +63,10 @@ class GlobalMap extends React.Component {
     axios.get('/api/regions')
       .then(res => this.setState({ regions: res.data }))
       .catch(err => console.log(err))
+    
+    setTimeout(() => {
+      this.setState({ overlay: false })
+    }, 2000)
   }
 
   render() {
@@ -69,8 +74,10 @@ class GlobalMap extends React.Component {
     const { clickedRegion, regions } = this.state
     return (
       <>
-      {/* <div className="">Pick a region</div> */}
-        <div>
+        <div className="animated fadeIn">
+          <div className={this.state.overlay === true ? 'overlay' : 'overlay animated fadeOut'}>
+            <h2>pick a region...</h2>
+          </div>
           <div className={`modal ${this.state.clickedRegion ? 'active' : ''}`} id="modal-id">
             <a href="#close" className="modal-overlay" aria-label="Close" onClick={this.closeModal}></a>
             <div className="modal-container">
@@ -92,7 +99,7 @@ class GlobalMap extends React.Component {
               </div>
             </div>
           </div>
-          <div className="map">
+          <div>
             <VectorMap {...mapData} layerProps={this.layerProps} currentLayers={this.getRegion()}/>     
           </div>
         </div>

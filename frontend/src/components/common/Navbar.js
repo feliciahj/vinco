@@ -18,7 +18,7 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         <div>
-          <Link className="btn btn-link nav-item logo" to="/">VINco</Link>
+          {localStorage.token && <Link className="btn btn-link nav-item logo" to="/">VINco</Link>}
         </div>
         <div className="input-group input-inline nav-links">
           {localStorage.token && <Link className="btn btn-link nav-item navItem tanzanite" to="/funds">browse funds</Link>}
