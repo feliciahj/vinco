@@ -8,13 +8,15 @@ $grey: rgb(83, 80, 88);
 $pink: rgb(253, 21, 214);
 $lightpink: rgba(253, 21, 214, 0.212);
 
-// Use this font for all the text later and playfair for headings:
-
+// Use Raleway for main text:
 // font-family: 'Raleway', sans-serif;
+
+// Use Playfair Display:
+// font-family: 'Playfair Display', serif;
 
 html, body {
   padding: 0px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Raleway', sans-serif; 
   height: 100%;
 }
 
@@ -157,10 +159,6 @@ h1.homeTitle {
   transform: scale(1.05);
 }
 
-.btn:focus {
-  outline: !important none;
-}
-
 // ****************************************   FUND INDEX   ****************************************
 
 .fundContainer {
@@ -180,20 +178,17 @@ h1.homeTitle {
 }
 
 .searchBar:hover {
-  background: $tanzanite;
-  color: white;
+  background: black;
+  color: $pink;
+  border: solid 1px;
+  border-color: $pink;
 }
 
-.searchbar:focus {
-  background: white;
+.filterHeading {
+  width: 100px;
+  background: $lightpink;
+  width: auto;
 }
-
-// .filterHeading {
-//   width: 100px;
-//   background: $lightpink;
-//   // border: none;
-//   // outline: none;
-// }
 
 .focus {
   background: rgba(4, 196, 29, 0.705);
@@ -215,19 +210,19 @@ h1.homeTitle {
   color: white;
 }
 
+option:hover {
+  background: rgb(0, 0, 0);
+  color: $pink;
+}
+
 .none {
   background: none;
 }
 
-// .filter:hover {
-//   background: $pink;
-//   color: white;
-// }
-
-// .filter:active {
-//   background: greenyellow;
-//   color: white;
-// }
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 // ****************************************   FUND SHOWPAGE   ****************************************
 
@@ -410,7 +405,7 @@ svg {
 
 
 
-
+// *********************************************************** ANIMATE STUFF *********************************************************** 
 
 
 // ANIMATE:
