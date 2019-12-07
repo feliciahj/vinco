@@ -18,7 +18,7 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         <div>
-          {Auth.isAuthenticated() && <Link className="btn btn-link nav-item logo" to="/">VINco</Link>}
+          {Auth.isAuthenticated() && <Link className="btn btn-link nav-item logo" to="/">V</Link>}
         </div>
         <div className="input-group input-inline nav-links">
           {Auth.isAuthenticated() && <Link className="btn btn-link nav-item navItem tanzanite" to="/funds">browse funds</Link>}
