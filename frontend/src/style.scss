@@ -123,13 +123,16 @@ html, body {
 
 // ****************************************   HOMEPAGE   ****************************************
 
-h1.homeTitle {
+h1 {
+  font-family: 'Raleway', sans-serif; 
+  color: rgb(74, 3, 189);
   font-size: 150px;
+  font-weight: lighter;
   margin-bottom: 20px;
   transition: all .2s ease-in-out;
 }
 
-.homeTitle:hover {
+h1:hover {
   transform: scale(1.05);
 }
 
@@ -188,26 +191,23 @@ h1.homeTitle {
   width: 100px;
   background: $lightpink;
   width: auto;
+  text-align: center;
 }
 
-.focus {
-  background: rgba(4, 196, 29, 0.705);
-  color: white;
+.default {
+  background: $lightpink;
 }
 
 .house {
-  background: rgba(47, 61, 255, 0.692);
-  color: white;
+  background: $lightpink;
 }
 
 .structure {
-  background: rgba(251, 255, 2, 0.945);
-  color: $grey;
+  background: $lightpink;
 }
 
 .styles {
-  background: rgba(207, 10, 207, 0.815);
-  color: white;
+  background: $lightpink;
 }
 
 option:hover {

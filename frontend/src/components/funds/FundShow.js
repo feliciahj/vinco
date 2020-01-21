@@ -14,10 +14,11 @@ class FundShow extends React.Component {
   componentDidMount() {
     const fundId = this.props.match.params.id
     axios.get(`/api/funds/${fundId}`)
-      .then(res => this.setState({ fund: res.data }))
+      .then(res => console.log(res.data))
       .catch(err => console.log(err))
   }
 
+  // this.setState({ fund: res.data }))
   render() {
     if (!this.state.fund) return null
     const { fund } = this.state

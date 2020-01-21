@@ -138,7 +138,7 @@ class Register extends React.Component {
 
                 <br />
                 <div className="centre">
-                  <button className="btn btn-primary btn-sm" type="submit">open <span className="vincoWhite">VINco</span> account</button>
+                  <button className="btn btn-primary btn-sm" type="submit">open <span className="vincoWhite">V</span>INCO account</button>
                 </div>
               </div>
             </form>
